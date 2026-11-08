@@ -270,6 +270,115 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
   .v-subscription .sub-stat{font-size:.48rem}
   .v-subscription .sub-phone{font-size:.7rem}
 }
+
+/* Mobile portfolio cards: stack artwork, title and description instead of overlaying them */
+@media (max-width:760px){
+  .proj{
+    position:relative!important;
+    top:auto!important;
+    height:auto!important;
+    min-height:100svh;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto auto auto;
+    align-content:start;
+    justify-items:stretch;
+    gap:22px;
+    padding:clamp(148px,22vh,190px) 0 112px!important;
+    overflow:hidden;
+  }
+  .proj>.head{
+    grid-row:1;
+    position:relative!important;
+    inset:auto!important;
+    z-index:2;
+    width:100%;
+    padding:0 22px!important;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .proj>.head h2{font-size:clamp(2.15rem,10vw,3.5rem);line-height:1.02;max-width:100%;overflow-wrap:anywhere}
+  .proj>.head .meta{font-size:.66rem;line-height:1.55;max-width:34ch;padding:0}
+  .proj>.stage,.proj>.sub-stage{
+    grid-row:2;
+    position:relative!important;
+    inset:auto!important;
+    z-index:1!important;
+    width:100%;
+    min-width:0;
+    min-height:0;
+    height:auto;
+    display:grid;
+    place-items:center;
+    padding:0 18px;
+    margin:0;
+    transform:none!important;
+  }
+  .proj>.stage .land{
+    width:min(100%,560px);
+    max-width:100%;
+    transform:none;
+  }
+  .proj>.stage .mock{
+    width:min(100%,620px);
+    max-width:100%;
+    transform:none;
+  }
+  .proj>.stage .mocknav{gap:10px;flex-wrap:wrap;font-size:.58rem}
+  .proj>.stage .mockhero{grid-template-columns:minmax(0,1fr) minmax(90px,.7fr);padding:18px 14px 14px;gap:12px}
+  .proj>.stage .mockhero h3{font-size:clamp(1.35rem,6vw,2.3rem);overflow-wrap:anywhere}
+  .proj>.stage .mockhero p{font-size:.68rem}
+  .proj>.stage .mockproducts,.proj>.stage .techtiles{padding-left:14px;padding-right:14px}
+  .proj>.info{
+    grid-row:3;
+    position:relative!important;
+    inset:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    z-index:2;
+    width:auto;
+    max-width:none;
+    margin:0;
+    padding:0 22px;
+    font-size:.92rem;
+    line-height:1.65;
+    gap:12px;
+    align-items:flex-start;
+  }
+  .proj>.info p{max-width:48ch;line-height:1.65}
+  .proj>.info .case-open,.proj>.info .go{max-width:100%;white-space:normal}
+  .v-subscription>.head,.v-subscription>.sub-stage,.v-subscription>.info{grid-area:auto}
+  .v-subscription>.sub-stage{padding:0 12px}
+  .v-subscription>.sub-stage .sub-board{width:100%;max-width:560px;transform:none}
+  .v-subscription .sub-laptop{width:94%;margin-top:12px}
+  .v-subscription .sub-dash{grid-template-columns:72px minmax(0,1fr);min-height:140px;gap:7px}
+  .v-subscription .sub-side{font-size:.46rem;padding:7px 5px}
+  .v-subscription .sub-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+  .v-subscription .sub-stat{font-size:.48rem;padding:6px 4px;overflow-wrap:anywhere}
+  .v-subscription .sub-stat b{font-size:clamp(.65rem,3vw,.9rem)}
+  .v-subscription .sub-chart{height:55px}
+  .v-subscription .sub-devices{gap:6px;margin-top:-20px}
+  .v-subscription .sub-phone{width:clamp(76px,25vw,126px);padding:6px;border-width:3px}
+  .v-subscription .sub-app,.v-subscription .sub-option{font-size:.43rem;overflow-wrap:anywhere}
+  .v-subscription>.info{padding:0 22px}
+}
+@media(max-width:420px){
+  .proj{gap:18px;padding-top:154px!important}
+  .proj>.head,.proj>.info{padding-left:18px!important;padding-right:18px!important}
+  .proj>.stage{padding-left:12px;padding-right:12px}
+  .proj>.stage .mockhero{grid-template-columns:minmax(0,1fr) 88px}
+  .proj>.stage .mocknav span:last-child{max-width:100%;overflow-wrap:anywhere}
+  .proj>.stage .mockproducts{gap:5px;padding-left:10px;padding-right:10px}
+  .proj>.stage .mockproducts div{font-size:.48rem;padding:6px}
+  .v-subscription>.sub-stage{padding:0 8px}
+  .v-subscription .sub-laptop{padding:7px;border-width:3px}
+  .v-subscription .sub-dash{grid-template-columns:58px minmax(0,1fr)}
+  .v-subscription .sub-phone{width:clamp(72px,24vw,98px)}
+  .v-subscription>.info{padding-left:18px;padding-right:18px}
+}
 </style>
 </head>
 <body>
