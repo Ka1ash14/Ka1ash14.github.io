@@ -93,6 +93,34 @@ a{color:inherit}
 .land .r{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 14px 16px}
 .land .r div{background:#efe4d6;border-radius:6px;padding:8px;font-size:.6rem}
 
+
+/* ---------- demo case studies ---------- */
+.v-shop{background:radial-gradient(90% 100% at 72% 35%,#76634e 0%,#29231f 48%,#100f0e 100%)}
+.v-tech{background:radial-gradient(100% 100% at 30% 30%,#29465a 0%,#111e29 55%,#090d12 100%)}
+.v-studio{background:radial-gradient(100% 100% at 65% 25%,#695c50 0%,#292622 48%,#11100f 100%)}
+.mock{width:min(760px,84vw);background:#f5f1eb;color:#211e1a;border-radius:12px;overflow:hidden;box-shadow:0 32px 90px #0009;transform:translateY(-1vh) rotate(-2deg);font-family:var(--body)}
+.mockbar{height:30px;background:#e9e4dc;display:flex;align-items:center;gap:5px;padding:0 12px}
+.mockbar i{width:7px;height:7px;border-radius:50%;background:#b8afa4}
+.mocknav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;font-size:.62rem;font-weight:700;letter-spacing:.08em}
+.mockhero{padding:26px 22px 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center}
+.mockhero h3{font-family:var(--serif);font-size:clamp(1.5rem,4vw,3.3rem);line-height:.95;font-weight:400;margin:0 0 10px}
+.mockhero p{font-size:.65rem;line-height:1.5;color:#70685f;margin:0 0 14px}
+.mockbtn{display:inline-block;background:#211e1a;color:#fff;padding:8px 12px;border-radius:3px;font-size:.58rem}
+.mockphoto{height:150px;border-radius:6px;background:linear-gradient(145deg,#d2c4b1,#897764 52%,#39312a);position:relative;overflow:hidden}
+.mockphoto:after{content:"";position:absolute;width:80px;height:125px;left:35%;top:12px;background:linear-gradient(90deg,#26221e,#4b4036,#211e1a);border-radius:34px 34px 10px 10px;box-shadow:28px 5px 0 -12px #b9a58f}
+.mockproducts{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:0 20px 18px}
+.mockproducts div{height:70px;background:#e7dfd4;border-radius:5px;padding:8px;font-size:.55rem;display:flex;align-items:flex-end}
+.mock-tech .mockhero{grid-template-columns:1fr}
+.mock-tech .mockhero h3{font-family:var(--body);font-weight:700;font-size:clamp(1.35rem,3vw,2.5rem)}
+.techtiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 20px 20px}
+.techtiles div{background:#e8edf0;border-radius:7px;min-height:92px;padding:9px;display:flex;flex-direction:column;justify-content:space-between;font-size:.55rem}
+.device{height:42px;width:60px;margin:auto;border:4px solid #384a58;border-radius:8px;background:linear-gradient(135deg,#d9e3e9,#8ca1ad)}
+.mock-studio{background:#f0eee9}
+.mock-studio .mockhero{grid-template-columns:1fr}
+.mock-studio .mockhero h3{font-size:clamp(2rem,5vw,4rem);max-width:10ch}
+.studio-strip{height:72px;margin:0 20px 20px;border-radius:5px;background:linear-gradient(110deg,#d2c8bb,#9b8b79 40%,#47423c 41%,#242320)}
+@media(max-width:600px){.mock{width:88vw}.mockhero{padding:18px 14px 14px;gap:10px}.mockphoto{height:110px}.mockproducts,.techtiles{padding-left:14px;padding-right:14px}.mocknav{padding:12px 14px}}
+
 /* ---------- grid mode ---------- */
 body.grid .feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;
   padding-top:calc(70px + env(safe-area-inset-top,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -207,6 +235,46 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
       <p>Одностраничник малого бизнеса: оффер, меню, отзывы, контакты и заказ в Telegram.</p>
     </div>
   </section>
+
+  <section class="proj v-shop" aria-label="Демонстрационный интернет-магазин одежды KA1ASH STORE">
+    <div class="stage" aria-hidden="true">
+      <div class="mock">
+        <div class="mockbar"><i></i><i></i><i></i></div>
+        <div class="mocknav"><span>KA1ASH STORE</span><span>NEW / SHOP / ABOUT　 BAG (0)</span></div>
+        <div class="mockhero"><div><h3>Wear your<br>own rules.</h3><p>Новая капсула базовой уличной одежды. Лаконичные формы и вещи на каждый день.</p><span class="mockbtn">СМОТРЕТЬ КОЛЛЕКЦИЮ</span></div><div class="mockphoto"></div></div>
+        <div class="mockproducts"><div>01 / HOODIE</div><div>02 / T-SHIRT</div><div>03 / PANTS</div></div>
+      </div>
+    </div>
+    <div class="head"><h2><span class="clip"><span>KA1ASH STORE</span></span></h2><div class="meta">Интернет-магазин,<br>e-commerce, адаптив<br>(концепт · 2026)</div></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Концепция магазина одежды: главная, каталог и карточка товара. Проработаны состояния корзины, выбор количества и сценарий оформления заказа.</p><p><b>Технический фокус:</b> структура каталога, адаптивные блоки, HTML/CSS/JS и логика интерфейса корзины.</p></div>
+  </section>
+
+  <section class="proj v-tech" aria-label="Демонстрационный каталог электроники TECHSTORE">
+    <div class="stage" aria-hidden="true">
+      <div class="mock mock-tech">
+        <div class="mockbar"><i></i><i></i><i></i></div>
+        <div class="mocknav"><span>TECHSTORE</span><span>КАТАЛОГ　 ДОСТАВКА　 КОНТАКТЫ</span></div>
+        <div class="mockhero"><div><h3>Техника для твоего ритма.</h3><p>Подборка устройств для работы, дома и путешествий.</p></div></div>
+        <div class="techtiles"><div><span class="device"></span><b>Наушники</b><span>от 4 990 ₽</span></div><div><span class="device"></span><b>Смартфоны</b><span>от 29 990 ₽</span></div><div><span class="device"></span><b>Аксессуары</b><span>от 990 ₽</span></div></div>
+      </div>
+    </div>
+    <div class="head"><h2><span class="clip"><span>TECHSTORE</span></span></h2><div class="meta">Каталог товаров,<br>карточки, адаптив<br>(концепт · 2026)</div></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Каталог электроники с категориями, карточками товаров, ценами и переходом к подробной информации. Интерфейс рассчитан на удобный просмотр с телефона и компьютера.</p><p><b>Технический фокус:</b> сетка карточек, единые компоненты, адаптивная вёрстка и интерактивные элементы.</p></div>
+  </section>
+
+  <section class="proj v-studio" aria-label="Демонстрационный корпоративный сайт STUDIO">
+    <div class="stage" aria-hidden="true">
+      <div class="mock mock-studio">
+        <div class="mockbar"><i></i><i></i><i></i></div>
+        <div class="mocknav"><span>STUDIO®</span><span>УСЛУГИ　 ПРОЕКТЫ　 СВЯЗАТЬСЯ ↗</span></div>
+        <div class="mockhero"><div><h3>Идеи, которые становятся цифровым опытом.</h3><p>Небольшая digital-команда. Дизайн, разработка и запуск сайтов для бизнеса.</p><span class="mockbtn">ОБСУДИТЬ ПРОЕКТ ↗</span></div></div>
+        <div class="studio-strip"></div>
+      </div>
+    </div>
+    <div class="head"><h2><span class="clip"><span>STUDIO</span></span></h2><div class="meta">Корпоративный сайт,<br>Zero Block, анимации<br>(концепт · 2026)</div></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Презентационный сайт digital-студии: первый экран, описание услуг, блок проектов и контактный призыв к действию.</p><p><b>Технический фокус:</b> Zero Block, кастомные CSS-эффекты, анимации появления и мобильная адаптация.</p></div>
+  </section>
+
 </main>
 
 <section class="about" id="services">
