@@ -499,6 +499,43 @@ body{background:#11100f;color:#f3eee8}
 }
 @media(prefers-reduced-motion:reduce){.hero-primary,.hero-secondary{transition:none}}
 
+
+/* KA1ASH motion system: calm, editorial and touch-friendly */
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+.top,.nav a,.brand,.tg,.hero-primary,.hero-secondary,.case-open,.go{transition:color .28s ease,background-color .28s ease,border-color .28s ease,transform .35s cubic-bezier(.2,.75,.25,1),box-shadow .35s ease}
+.nav a{position:relative}
+.nav a:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:#e9c5ad;transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.nav a:hover:after,.nav a.on:after{transform:scaleX(1)}
+.hero-copy>*{animation:kaRise .85s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>.hero-eyebrow{animation-delay:.12s}
+.hero-copy>.hero-overline{animation-delay:.22s}
+.hero-copy>h1{animation-delay:.32s}
+.hero-copy>.hero-description{animation-delay:.43s}
+.hero-copy>.hero-actions{animation-delay:.54s}
+.hero-copy>.hero-skills{animation-delay:.65s}
+.hero-portrait-wrap{animation:kaPortrait 1.15s cubic-bezier(.2,.7,.2,1) .25s both}
+.hero-glow{animation:kaGlow 1.5s ease-out both}
+@keyframes kaRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes kaPortrait{from{opacity:0;transform:translateY(30px) scale(.975)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes kaGlow{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}
+html.motion-ready [data-reveal]{opacity:0;transform:translate3d(0,28px,0) scale(.99);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms);will-change:opacity,transform}
+html.motion-ready [data-reveal="left"]{transform:translate3d(-28px,0,0)}
+html.motion-ready [data-reveal="right"]{transform:translate3d(28px,0,0)}
+html.motion-ready [data-reveal].is-visible{opacity:1;transform:translate3d(0,0,0) scale(1);will-change:auto}
+.proj .sub-stage,.proj .stage,.proj .bg{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease}
+.proj .case-open,.proj .go{transition:transform .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease}
+.proj .case-open:hover,.proj .go:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.18)}
+.hero-primary:hover,.hero-secondary:hover,.tg:hover{box-shadow:0 12px 30px rgba(190,137,104,.16)}
+.hero-portrait{transition:filter .7s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.hero-portrait-wrap:hover .hero-portrait{filter:saturate(.95) contrast(1.04);transform:scale(1.015)}
+@media(max-width:760px){html{scroll-padding-top:72px}.hero-portrait-wrap:hover .hero-portrait{transform:none}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .hero-copy>*,.hero-portrait-wrap,.hero-glow{animation:none!important}
+ html.motion-ready [data-reveal],html.motion-ready [data-reveal].is-visible{opacity:1!important;transform:none!important;transition:none!important;will-change:auto}
+ .nav a:after{transition:none}
+}
+
 </style>
 </head>
 <body>
@@ -751,6 +788,32 @@ body{background:#11100f;color:#f3eee8}
   dialog.querySelector('.case-close').addEventListener('click',closeCase);
   dialog.addEventListener('click',event=>{if(event.target===dialog)closeCase()});
   addEventListener('keydown',event=>{if(event.key==='Escape'&&dialog.classList.contains('open'))closeCase()});
+
+
+  // Editorial scroll reveals: elements animate once as they enter the viewport.
+  if(!reduce && 'IntersectionObserver' in window){
+    const revealSelectors=[
+      '.work-intro > div','.work-intro > p',
+      '.proj .sub-stage','.proj .bg','.proj > .stage','.proj .head','.proj .info',
+      '.about .lab','.about .lead','.about .row','.about .contact'
+    ];
+    const revealItems=[...new Set(revealSelectors.flatMap(sel=>[...document.querySelectorAll(sel)]))];
+    revealItems.forEach((el,i)=>{
+      el.setAttribute('data-reveal', el.matches('.work-intro > p,.proj .info,.about .contact')?'right':'up');
+      const siblings=[...el.parentElement.children].filter(node=>revealItems.includes(node));
+      el.style.setProperty('--reveal-delay',Math.min(siblings.indexOf(el),4)*85+'ms');
+    });
+    document.documentElement.classList.add('motion-ready');
+    const revealObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{threshold:.12,rootMargin:'0px 0px -45px 0px'});
+    revealItems.forEach(el=>revealObserver.observe(el));
+  }
 
   // nav highlight
   const links=[...document.querySelectorAll('.nav a')];
