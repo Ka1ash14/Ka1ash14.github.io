@@ -576,9 +576,19 @@ html.motion-ready [data-reveal].is-visible{opacity:1;transform:translate3d(0,0,0
   .proj .stage>.mock,.proj .stage>.chat,.proj .stage>.land,.proj .sub-stage>.sub-board,.proj .bg img{translate:none!important}
 }
 
+
+/* Accessibility finishing touches */
+.skip-link{position:fixed;z-index:1000;top:12px;left:12px;transform:translateY(-160%);
+  padding:11px 16px;border-radius:999px;background:#e9c5ad;color:#1b1714;
+  font:600 .8rem var(--body);text-decoration:none;box-shadow:0 8px 24px #0008}
+.skip-link:focus{transform:translateY(0)}
+a,button{ -webkit-tap-highlight-color:transparent }
+button:focus-visible,a:focus-visible{outline:2px solid #e9c5ad;outline-offset:4px}
+::selection{background:#e9c5ad;color:#1b1714}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#work">Перейти к проектам</a>
 
 <div class="intro" aria-hidden="true"><div class="w"><span>K</span><span>A</span><span>1</span><span>A</span><span>S</span><span>H</span></div></div>
 
