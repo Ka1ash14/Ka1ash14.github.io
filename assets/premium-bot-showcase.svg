@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="t d">
+<title id="t">Premium Bot — интерфейсы Telegram-бота и панели администратора</title><desc id="d">Три экрана смартфонов с выбором тарифа, оплатой и активной подпиской перед экраном админ-панели.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10111e"/><stop offset=".55" stop-color="#171334"/><stop offset="1" stop-color="#080a13"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#6e4cff" stop-opacity=".65"/><stop offset="1" stop-color="#6e4cff" stop-opacity="0"/></radialGradient>
+ <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#24263f"/><stop offset="1" stop-color="#111321"/></linearGradient>
+ <linearGradient id="purple" x2="1" y2="1"><stop stop-color="#9c7cff"/><stop offset="1" stop-color="#5136e8"/></linearGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#ffe8a1"/><stop offset="1" stop-color="#d48c28"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="22"/></filter>
+ </defs>
+ <rect width="1400" height="860" rx="34" fill="url(#bg)"/><circle cx="1020" cy="180" r="460" fill="url(#glow)"/><circle cx="250" cy="760" r="330" fill="url(#glow)" opacity=".45"/>
+ <path d="M0 690 Q330 560 620 720 T1400 630" fill="none" stroke="#7861ff" stroke-opacity=".22" stroke-width="2"/>
+ <!-- laptop -->
+ <g transform="translate(540 65)">
+  <rect x="0" y="0" width="790" height="485" rx="28" fill="#080a12" stroke="#69708f" stroke-width="8"/>
+  <rect x="18" y="18" width="754" height="445" rx="15" fill="#111526"/>
+  <rect x="36" y="36" width="180" height="410" rx="10" fill="#191d34"/>
+  <circle cx="64" cy="68" r="13" fill="url(#gold)"/><text x="87" y="75" fill="#f8f5ff" font-size="20" font-family="Arial" font-weight="700">Premium Bot</text>
+  <g font-family="Arial" font-size="15" fill="#aaaed0"><text x="58" y="132">▣  Статистика</text><text x="58" y="178">♙  Пользователи</text><text x="58" y="224">◷  Подписки</text><text x="58" y="270">▤  Тарифы</text><text x="58" y="316">▧  Документы</text><text x="58" y="362">⚙  Настройки</text></g>
+  <text x="245" y="82" fill="#fff" font-family="Arial" font-size="26" font-weight="700">Статистика</text>
+  <g font-family="Arial"><rect x="240" y="105" width="155" height="86" rx="12" fill="#222743"/><rect x="410" y="105" width="155" height="86" rx="12" fill="#222743"/><rect x="580" y="105" width="165" height="86" rx="12" fill="#222743"/>
+   <g fill="#aab0d1" font-size="14"><text x="258" y="135">Пользователи</text><text x="428" y="135">Подписки</text><text x="598" y="135">Общий доход</text></g>
+   <g fill="#fff" font-size="27" font-weight="700"><text x="258" y="171">2 847</text><text x="428" y="171">1 932</text><text x="598" y="171">483 000 ₽</text></g>
+   <rect x="240" y="210" width="325" height="215" rx="12" fill="#1b2038"/><text x="260" y="240" fill="#fff" font-size="17">Динамика подписок</text>
+   <path d="M260 380 L295 354 330 365 365 330 400 340 435 302 470 314 505 278 545 255" fill="none" stroke="#a68cff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M260 380 L295 354 330 365 365 330 400 340 435 302 470 314 505 278 545 255 L545 405 L260 405Z" fill="#8064ff" opacity=".14"/>
+   <rect x="580" y="210" width="165" height="215" rx="12" fill="#1b2038"/><text x="600" y="240" fill="#fff" font-size="17">Тарифы</text>
+   <g fill="#c4c7dd" font-size="14"><text x="600" y="280">1 месяц</text><text x="600" y="318">3 месяца</text><text x="600" y="356">6 месяцев</text><text x="600" y="394">12 месяцев</text></g><g fill="#fff" font-size="14" text-anchor="end"><text x="725" y="280">499 ₽</text><text x="725" y="318">1 299 ₽</text><text x="725" y="356">1 999 ₽</text><text x="725" y="394">2 999 ₽</text></g>
+  </g>
+  <path d="M-30 485 H820 L875 525 Q880 538 855 541 H-65 Q-90 538 -82 525Z" fill="#626783" stroke="#a5abc8" stroke-width="3"/><path d="M-30 485 H820 L875 525 H-82Z" fill="#343950"/>
+ </g>
+ <!-- phones -->
+ <g transform="translate(70 220)">
+  <ellipse cx="205" cy="575" rx="200" ry="28" fill="#000" opacity=".45" filter="url(#shadow)"/>
+  <g>
+   <rect x="0" y="0" width="245" height="590" rx="38" fill="#070910" stroke="#737892" stroke-width="6"/><rect x="11" y="12" width="223" height="566" rx="29" fill="url(#screen)"/><rect x="84" y="14" width="78" height="17" rx="9" fill="#05060b"/>
+   <text x="32" y="62" fill="#f8f6ff" font-family="Arial" font-size="17" font-weight="700">Premium Content</text><rect x="28" y="85" width="189" height="110" rx="13" fill="#33256c"/><text x="123" y="158" text-anchor="middle" fill="url(#gold)" font-size="54">♛</text>
+   <text x="28" y="230" fill="#fff" font-family="Arial" font-size="16" font-weight="700">Выберите подписку</text>
+   <g font-family="Arial" font-size="14" fill="#fff"><rect x="25" y="250" width="195" height="49" rx="10" fill="#2a2d46"/><text x="43" y="280">1 месяц — 499 ₽</text><rect x="25" y="310" width="195" height="49" rx="10" fill="#2a2d46"/><text x="43" y="340">3 месяца — 1 299 ₽</text><rect x="25" y="370" width="195" height="49" rx="10" fill="#2a2d46"/><text x="43" y="400">6 месяцев — 1 999 ₽</text><rect x="25" y="430" width="195" height="49" rx="10" fill="#2a2d46"/><text x="43" y="460">12 месяцев — 2 999 ₽</text></g>
+   <rect x="25" y="500" width="195" height="42" rx="20" fill="url(#purple)"/><text x="122" y="526" fill="#fff" font-family="Arial" font-size="15" text-anchor="middle">Подробнее</text>
+  </g>
+ </g>
+ <g transform="translate(340 265)">
+  <ellipse cx="150" cy="530" rx="145" ry="24" fill="#000" opacity=".4" filter="url(#shadow)"/>
+  <rect x="0" y="0" width="245" height="555" rx="38" fill="#070910" stroke="#737892" stroke-width="6"/><rect x="11" y="12" width="223" height="531" rx="29" fill="url(#screen)"/><rect x="84" y="14" width="78" height="17" rx="9" fill="#05060b"/>
+  <text x="31" y="62" fill="#f8f6ff" font-family="Arial" font-size="17" font-weight="700">Оплата подписки</text><rect x="26" y="112" width="193" height="128" rx="14" fill="#252941"/><text x="122" y="156" fill="#a68cff" font-size="24" text-anchor="middle">◆ 3 месяца</text><text x="122" y="208" fill="#fff" font-family="Arial" font-size="33" font-weight="700" text-anchor="middle">1 299 ₽</text>
+  <text x="122" y="275" fill="#c7c9dd" font-family="Arial" font-size="14" text-anchor="middle">Безопасная оплата</text><rect x="25" y="300" width="195" height="54" rx="14" fill="url(#purple)"/><text x="122" y="333" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Перейти к оплате ↗</text><text x="122" y="400" fill="#aaaed0" font-family="Arial" font-size="13" text-anchor="middle">Данные защищены</text>
+ </g>
+ <g transform="translate(610 315)">
+  <ellipse cx="140" cy="485" rx="130" ry="24" fill="#000" opacity=".4" filter="url(#shadow)"/>
+  <rect x="0" y="0" width="230" height="520" rx="38" fill="#070910" stroke="#737892" stroke-width="6"/><rect x="11" y="12" width="208" height="496" rx="29" fill="url(#screen)"/><rect x="78" y="14" width="75" height="17" rx="9" fill="#05060b"/>
+  <text x="115" y="65" fill="#fff" font-family="Arial" font-size="16" text-anchor="middle">Premium Content</text><circle cx="115" cy="185" r="48" fill="#22bd75"/><path d="M90 185 L108 203 143 165" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="115" y="280" fill="#fff" font-family="Arial" font-size="19" font-weight="700" text-anchor="middle">Подписка активна!</text><rect x="25" y="310" width="180" height="58" rx="12" fill="#292c46"/><text x="115" y="345" fill="#d8d9eb" font-family="Arial" font-size="14" text-anchor="middle">Доступ активен</text><rect x="25" y="390" width="180" height="48" rx="22" fill="url(#purple)"/><text x="115" y="420" fill="#fff" font-family="Arial" font-size="15" text-anchor="middle">Перейти в канал</text>
+ </g>
+</svg>
