@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Портфолио: сайты на Tilda и коде, Telegram-боты.">
-<title>Ka1ash — сайты и боты</title>
+<meta name="theme-color" content="#11100f">
+<title>KA1ASH — Digital Developer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Dela+Gothic+One&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;600&display=swap">
 <style>
 /* Layout: лента проектов на весь экран, карточки наезжают друг на друга; фиксированное меню и огромный логотип внизу */
@@ -405,22 +406,126 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
  .proj>.head .meta{padding:7px 9px!important;font-size:.62rem}
  .proj>.info{margin:0 14px;padding:13px 14px!important}
 }
+
+/* ===== KA1ASH warm editorial redesign ===== */
+:root{--bg:#11100f;--fg:#f3eee8;--muted:#aaa098;--line:#3a302a;--pill:#e9c5ad;--pill-ink:#1b1714;--accent:#d7a98e;--serif:"Fraunces",Georgia,serif}
+body{background:#11100f;color:#f3eee8}
+.top.ka-header{mix-blend-mode:normal;color:#f3eee8;background:linear-gradient(180deg,rgba(17,16,15,.94),rgba(17,16,15,.55));padding:18px max(5vw,22px);gap:26px;min-height:76px;box-sizing:border-box;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto}
+.brand-symbol{font:400 2.3rem/1 var(--serif);color:#e9c5ad}
+.brand-copy{display:flex;flex-direction:column;gap:2px}
+.brand-copy b{font:500 1.15rem var(--serif);letter-spacing:.04em}
+.brand-copy small{font:400 .62rem var(--body);color:#aaa098;letter-spacing:.02em}
+.ka-nav{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3vw,42px);font:500 .78rem var(--body)}
+.ka-nav a{text-decoration:none;color:#c9c0b8;transition:color .2s}
+.ka-nav a:hover,.ka-nav a.on{color:#e9c5ad;text-decoration:none}
+.ka-contact{display:inline-flex;white-space:nowrap;border-color:#8d7567;color:#f3eee8;padding:10px 16px;font:500 .72rem var(--body)}
+.mark{color:#e9c5ad;mix-blend-mode:normal;opacity:.07;letter-spacing:.06em}
+.intro{background:#11100f}.intro span{color:#e9c5ad}
+.hero{position:relative;isolation:isolate;min-height:100svh;box-sizing:border-box;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);align-items:center;gap:clamp(20px,4vw,70px);padding:clamp(130px,16vh,170px) max(6vw,24px) 100px;background:radial-gradient(ellipse at 76% 45%,#3a2b23 0%,#211b17 24%,#11100f 62%)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(110deg,#11100f 0%,rgba(17,16,15,.95) 42%,rgba(17,16,15,.22) 100%)}
+.hero-glow{position:absolute;z-index:-1;width:55vw;height:55vw;right:8%;top:12%;border:1px solid rgba(233,197,173,.16);border-radius:50%;box-shadow:0 0 120px rgba(190,137,104,.10),inset 0 0 100px rgba(190,137,104,.07)}
+.hero-copy{position:relative;z-index:2;max-width:650px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid #55443a;background:#1b1714;border-radius:99px;padding:9px 15px;color:#e9c5ad;font-size:.75rem}
+.hero-eyebrow i{width:7px;height:7px;background:#b9a18c;border-radius:50%;box-shadow:0 0 12px #b9a18c}
+.hero-overline,.section-kicker{font:500 .66rem var(--mono);letter-spacing:.16em;color:#b89a87;margin:32px 0 14px}
+.hero h1{font:300 clamp(3.6rem,7.4vw,7.3rem)/.91 var(--serif);letter-spacing:-.055em;margin:0;color:#f3eee8}
+.hero h1 em,.work-intro h2 em{font-style:normal;color:#e9c5ad}
+.hero-dot{color:#b98f78}
+.hero-description{max-width:430px;color:#c2b8af;font-size:clamp(.95rem,1.3vw,1.08rem);line-height:1.75;margin:26px 0 28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-primary,.hero-secondary{display:inline-flex;align-items:center;justify-content:center;gap:22px;border-radius:99px;padding:14px 21px;text-decoration:none;font-size:.82rem;transition:transform .2s,background .2s}
+.hero-primary{background:#e9c5ad;color:#1b1714}.hero-primary span{font-size:1rem}
+.hero-secondary{border:1px solid #786456;color:#f3eee8}
+.hero-primary:hover,.hero-secondary:hover{transform:translateY(-3px)}
+.hero-skills{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:44px;color:#93877d;font:500 .61rem var(--mono);letter-spacing:.1em}
+.hero-skills b{color:#c49c83}
+.hero-portrait-wrap{position:relative;align-self:stretch;min-height:470px;display:flex;align-items:flex-end;justify-content:center;isolation:isolate}
+.portrait-ring{position:absolute;z-index:-1;width:min(38vw,530px);aspect-ratio:1;border:1px solid rgba(233,197,173,.28);border-radius:50%;top:10%;left:50%;transform:translateX(-50%);box-shadow:0 0 80px rgba(191,142,113,.12),inset 0 0 70px rgba(191,142,113,.08)}
+.hero-portrait{position:relative;z-index:1;width:min(100%,570px);height:min(76vh,700px);object-fit:cover;object-position:center 24%;border-radius:48% 48% 12px 12px;filter:saturate(.76) contrast(1.03);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+.portrait-caption{position:absolute;z-index:2;bottom:9%;left:4%;right:4%;display:flex;justify-content:space-between;color:#d0b5a3;font:500 .57rem var(--mono);letter-spacing:.12em}
+.hero-scroll{position:absolute;left:max(6vw,24px);bottom:30px;display:flex;align-items:center;gap:14px;text-decoration:none;color:#93877d;font:500 .58rem var(--mono);letter-spacing:.16em}
+.hero-scroll i{height:1px;width:42px;background:#b89a87}
+.work-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:76px max(6vw,24px) 36px;background:#11100f}
+.work-intro .section-kicker{display:block;margin:0 0 14px}
+.work-intro h2{font:300 clamp(2.3rem,5vw,4.6rem)/1 var(--serif);margin:0;letter-spacing:-.03em}
+.work-intro p{color:#a99e94;font-size:.82rem;line-height:1.7;margin:0 0 5px}
+.proj{border-color:#382e28}
+.proj .bg img{filter:blur(10px) brightness(.42) saturate(.62)}
+.v-subscription{background:radial-gradient(90% 100% at 72% 35%,#514034 0%,#27211d 48%,#11100f 100%)}
+.v-bot{background:radial-gradient(120% 90% at 70% 30%,#34434b 0%,#1b2428 55%,#101211 100%)}
+.v-cafe{background:radial-gradient(110% 90% at 30% 70%,#75513b 0%,#39271d 50%,#140f0c 100%)}
+.v-shop{background:radial-gradient(90% 100% at 72% 35%,#6b594a 0%,#29231f 48%,#100f0e 100%)}
+.v-tech{background:radial-gradient(100% 100% at 30% 30%,#3d5059 0%,#1b2529 55%,#090d12 100%)}
+.v-studio{background:radial-gradient(100% 100% at 65% 25%,#6a594d 0%,#292622 48%,#11100f 100%)}
+.proj>.head .meta{background:rgba(243,238,232,.97)!important;color:#211a16!important;border-color:#e9c5ad!important}
+.proj>.info{background:rgba(20,18,16,.96)!important;border-color:rgba(233,197,173,.25)!important}
+.proj>.info .kind{color:#e9c5ad!important;border-color:#a88772!important;background:rgba(233,197,173,.08)!important}
+.proj>.info .case-open{border-color:#a88772!important;background:rgba(233,197,173,.1)!important;color:#f3eee8!important}
+.proj>.info .go{background:#e9c5ad!important;color:#1b1714!important}
+.about{background:#171513;border-color:#3a302a}
+.lab{color:#c5a58f}
+.contact code{background:#302720}
+:focus-visible{outline-color:#e9c5ad}
+@media(max-width:900px){
+ .top.ka-header{padding-inline:22px;gap:16px}.ka-nav{gap:16px}.brand-copy small{display:none}
+ .hero{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);gap:18px;padding-inline:5vw}
+ .hero h1{font-size:clamp(3.3rem,8vw,5.8rem)}
+}
+@media(max-width:700px){
+ .top.ka-header{padding:12px 16px;min-height:68px;gap:10px}
+ .brand-symbol{font-size:1.9rem}.brand-copy b{font-size:.94rem}
+ .ka-nav{gap:12px;font-size:.68rem}.ka-nav a:first-child{display:none}
+ .ka-contact{font-size:0;padding:9px 11px}.ka-contact:after{content:"↗";font-size:.9rem}
+ .hero{min-height:auto;grid-template-columns:minmax(0,1fr);gap:10px;padding:112px 22px 80px;background:radial-gradient(ellipse at 72% 54%,#3a2b23 0%,#211b17 28%,#11100f 72%)}
+ .hero-copy{order:1}.hero-portrait-wrap{order:2;min-height:360px;height:390px;margin-top:-6px}
+ .hero h1{font-size:clamp(3.5rem,15vw,5.6rem)}
+ .hero-overline{margin-top:24px}
+ .hero-description{max-width:38ch;font-size:.92rem;margin:20px 0 22px}
+ .hero-skills{margin-top:28px;font-size:.55rem}
+ .hero-portrait{height:390px;width:min(100%,410px);object-position:center 22%}
+ .portrait-ring{width:min(80vw,360px);top:2%}
+ .portrait-caption{bottom:7%;left:8%;right:8%}
+ .hero-scroll{bottom:25px}
+ .work-intro{padding:52px 22px 28px;align-items:flex-start;flex-direction:column;gap:12px}
+ .work-intro p{font-size:.76rem}
+ .about{padding-top:64px}
+}
+@media(max-width:390px){
+ .ka-nav{gap:9px;font-size:.62rem}
+ .brand{gap:7px}.brand-copy b{font-size:.83rem}
+ .hero{padding-inline:18px}.hero h1{font-size:clamp(3.1rem,14.5vw,4.2rem)}
+ .hero-portrait-wrap{height:340px;min-height:340px}.hero-portrait{height:340px}
+}
+@media(prefers-reduced-motion:reduce){.hero-primary,.hero-secondary{transition:none}}
+
 </style>
 </head>
 <body>
 
-<div class="intro" aria-hidden="true"><div class="w"><span>k</span><span>a</span><span>1</span><span>a</span><span>s</span><span>h</span></div></div>
+<div class="intro" aria-hidden="true"><div class="w"><span>K</span><span>A</span><span>1</span><span>A</span><span>S</span><span>H</span></div></div>
 
-<header class="top">
-  <nav class="nav"><a href="#work" class="on">Работы</a>, <a href="#services">Услуги</a>, <a href="#contact">Контакты</a></nav>
-  <div class="toggle" role="group" aria-label="Вид">
-    <button id="v-feed" type="button" aria-pressed="true">▬ Лента</button>
-    <button id="v-grid" type="button" aria-pressed="false">⋮⋮ Плитка</button>
-  </div>
-  <a class="tg" href="https://t.me/yuonger61" target="_blank" rel="noopener">TG ↗</a>
+<header class="top ka-header">
+  <a class="brand" href="#home" aria-label="KA1ASH — на главную"><span class="brand-symbol">K</span><span class="brand-copy"><b>KA1ASH</b><small>Developer & Creator</small></span></a>
+  <nav class="nav ka-nav" aria-label="Главная навигация"><a href="#home" class="on">Главная</a><a href="#work">Проекты</a><a href="#services">Услуги</a><a href="#contact">Контакты</a></nav>
+  <a class="tg ka-contact" href="https://t.me/yuonger61" target="_blank" rel="noopener">Связаться со мной ↗</a>
 </header>
-<div class="mark" aria-hidden="true">ka1ash</div>
+<div class="mark" aria-hidden="true">KA1ASH</div>
 
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-copy">
+    <span class="hero-eyebrow"><i></i> Открыт к интересным проектам</span>
+    <p class="hero-overline">DIGITAL DEVELOPMENT · 2026</p>
+    <h1>Создаю<br><em>цифровые</em><br>продукты<span class="hero-dot">.</span></h1>
+    <p class="hero-description">Telegram-боты, сайты и автоматизация для вашего бизнеса. Продуманный интерфейс, чистый код и внимание к деталям.</p>
+    <div class="hero-actions"><a class="hero-primary" href="#work">Смотреть проекты <span>↗</span></a><a class="hero-secondary" href="https://github.com/Ka1ash14" target="_blank" rel="noopener">GitHub <span>↗</span></a></div>
+    <div class="hero-skills"><span>WEB DESIGN</span><b>·</b><span>FRONTEND</span><b>·</b><span>TELEGRAM BOTS</span></div>
+  </div>
+  <div class="hero-portrait-wrap"><div class="portrait-ring"></div><div class="portrait-caption"><span>KA1ASH / 01</span><span>DEVELOPER & CREATOR</span></div><img class="hero-portrait" src="data:image/jpeg;base64,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" alt="Портрет разработчика KA1ASH"></div>
+  <a class="hero-scroll" href="#work"><span>SCROLL TO EXPLORE</span><i></i></a>
+</section>
+<div class="work-intro"><div><span class="section-kicker">SELECTED WORKS · 2026</span><h2>Избранные <em>проекты</em></h2></div><p>Разработка сайтов и цифровых решений<br>для реальных задач бизнеса.</p></div>
 <main class="feed" id="work">
 
   <section class="proj v-subscription" aria-label="Демонстрационный Telegram-бот для платных подписок">
