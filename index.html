@@ -219,6 +219,57 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
 .proj .case-open{display:inline-flex;align-items:center;justify-content:center;max-width:100%;white-space:normal;text-align:center;line-height:1.35;overflow-wrap:anywhere;padding:10px 15px;border:1px solid #8f7aff88;border-radius:30px;color:#e7e0ff;background:#7557ff18;font-family:inherit;font-size:12px;font-weight:600;}
 .proj .case-open:hover{background:#7658ff35;border-color:#a493ff;}
 @media(max-width:700px){.proj .head{flex-direction:column;gap:8px}.proj .meta{flex:0 1 auto}.proj .info{gap:10px}.proj .info p{font-size:14px;}}
+
+/* Premium Bot: keep the artwork and all copy in separate layout areas */
+.v-subscription{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(280px,.88fr);
+  grid-template-rows:auto 1fr;
+  grid-template-areas:"art title" "art copy";
+  align-items:center;
+  align-content:center;
+  gap:clamp(18px,3vw,42px);
+  height:auto;
+  min-height:min(760px,calc(100svh - 90px));
+  aspect-ratio:auto;
+  padding:clamp(24px,4vw,56px);
+  overflow:hidden;
+}
+.v-subscription>.sub-stage{grid-area:art;position:relative;inset:auto;z-index:0;width:100%;min-width:0;align-self:center}
+.v-subscription>.sub-stage .sub-board{width:100%;max-width:680px;margin:0 auto;transform:rotate(-1deg)}
+.v-subscription>.head{grid-area:title;position:relative;width:100%;padding:0;align-self:end;display:flex;flex-direction:column;gap:10px}
+.v-subscription>.head h2{font-size:clamp(2.1rem,5vw,4rem);line-height:1.02}
+.v-subscription>.head .meta{max-width:34ch;padding:0;line-height:1.6}
+.v-subscription>.info{grid-area:copy;position:relative;inset:auto;right:auto;bottom:auto;left:auto;width:100%;max-width:42ch;align-self:start;margin:0;font-size:clamp(.9rem,1.25vw,1rem);line-height:1.7;color:#f4f1ff}
+.v-subscription>.info p{color:#e4e0f2}
+.v-subscription>.info .kind{background:#17142c;border-color:#a89aff;color:#d8d0ff}
+.v-subscription>.info .case-open{background:#211b43;border-color:#9a87ff;color:#fff}
+@media(max-width:760px){
+  .v-subscription{
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto auto auto;
+    grid-template-areas:"art" "title" "copy";
+    gap:0;
+    min-height:0;
+    padding:28px 0 30px;
+    align-content:start;
+  }
+  .v-subscription>.sub-stage{padding:0 14px;margin:0 auto 22px}
+  .v-subscription>.sub-stage .sub-board{width:100%;max-width:560px;transform:none}
+  .v-subscription>.head{padding:0 22px;gap:8px}
+  .v-subscription>.head h2{font-size:clamp(2.2rem,10vw,3.2rem);line-height:1.04}
+  .v-subscription>.head .meta{font-size:.68rem;max-width:36ch}
+  .v-subscription>.info{padding:20px 22px 0;max-width:none;font-size:.92rem;gap:13px}
+  .v-subscription>.info p{max-width:42ch}
+}
+@media(max-width:390px){
+  .v-subscription>.sub-stage{padding:0 10px}
+  .v-subscription>.sub-board{padding:12px}
+  .v-subscription>.head{padding-inline:18px}
+  .v-subscription>.info{padding-inline:18px}
+  .v-subscription .sub-stat{font-size:.48rem}
+  .v-subscription .sub-phone{font-size:.7rem}
+}
 </style>
 </head>
 <body>
