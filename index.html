@@ -585,6 +585,14 @@ html.motion-ready [data-reveal].is-visible{opacity:1;transform:translate3d(0,0,0
 a,button{ -webkit-tap-highlight-color:transparent }
 button:focus-visible,a:focus-visible{outline:2px solid #e9c5ad;outline-offset:4px}
 ::selection{background:#e9c5ad;color:#1b1714}
+/* Balanced portfolio polish: clear contact path and honest demo labeling */
+.hero-actions{gap:10px}
+.hero-primary,.hero-secondary{min-height:48px;box-sizing:border-box}
+.hero-secondary{border-color:#8d7567;background:rgba(233,197,173,.035)}
+.hero-secondary:hover{border-color:#e9c5ad;background:rgba(233,197,173,.10)}
+.hero-github{padding-inline:17px;gap:10px}
+@media(max-width:700px){.hero-actions{display:grid;grid-template-columns:1fr 1fr}.hero-primary{grid-column:1/-1}.hero-secondary{width:100%;padding-inline:12px;gap:10px}.hero-github{justify-content:center}}
+@media(max-width:390px){.hero-actions{grid-template-columns:1fr}.hero-primary{grid-column:auto}}
 </style>
 </head>
 <body>
@@ -606,7 +614,7 @@ button:focus-visible,a:focus-visible{outline:2px solid #e9c5ad;outline-offset:4p
     <p class="hero-overline">DIGITAL DEVELOPMENT · 2026</p>
     <h1>Создаю<br><em>цифровые</em><br>продукты<span class="hero-dot">.</span></h1>
     <p class="hero-description">Telegram-боты, сайты и автоматизация для вашего бизнеса. Продуманный интерфейс, чистый код и внимание к деталям.</p>
-    <div class="hero-actions"><a class="hero-primary" href="#work">Смотреть проекты <span>↗</span></a><a class="hero-secondary" href="https://github.com/Ka1ash14" target="_blank" rel="noopener">GitHub <span>↗</span></a></div>
+    <div class="hero-actions"><a class="hero-primary" href="#work">Смотреть проекты <span>↗</span></a><a class="hero-secondary" href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить проект <span>↗</span></a><a class="hero-secondary hero-github" href="https://github.com/Ka1ash14" target="_blank" rel="noopener">GitHub <span>↗</span></a></div>
     <div class="hero-skills"><span>WEB DESIGN</span><b>·</b><span>FRONTEND</span><b>·</b><span>TELEGRAM BOTS</span></div>
   </div>
   <div class="hero-portrait-wrap"><div class="portrait-ring"></div><div class="portrait-caption"><span>KA1ASH / 01</span><span>DEVELOPER & CREATOR</span></div><img class="hero-portrait" src="ka1ash-portrait.webp" alt="Портрет разработчика KA1ASH" width="1152" height="1536" loading="eager" fetchpriority="high" decoding="async"></div>
