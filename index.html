@@ -121,6 +121,24 @@ a{color:inherit}
 .studio-strip{height:72px;margin:0 20px 20px;border-radius:5px;background:linear-gradient(110deg,#d2c8bb,#9b8b79 40%,#47423c 41%,#242320)}
 @media(max-width:600px){.mock{width:88vw}.mockhero{padding:18px 14px 14px;gap:10px}.mockphoto{height:110px}.mockproducts,.techtiles{padding-left:14px;padding-right:14px}.mocknav{padding:12px 14px}}
 
+
+/* Expanded portfolio case studies */
+.case-open{border:1px solid #fff;background:transparent;color:#fff;border-radius:30px;padding:9px 13px;font:600 .67rem var(--mono);text-transform:uppercase;cursor:pointer}
+.case-open:hover{background:#fff;color:#111}
+.case-dialog{position:fixed;inset:0;z-index:80;background:#080808d9;backdrop-filter:blur(12px);display:none;place-items:center;padding:12px;box-sizing:border-box}
+.case-dialog.open{display:grid}
+.case-panel{width:min(760px,100%);max-height:88svh;overflow:auto;background:#f2eee7;color:#211e1a;border-radius:14px;padding:clamp(22px,5vw,40px);box-sizing:border-box}
+.case-close{float:right;border:1px solid #b9b1a6;background:transparent;border-radius:30px;padding:7px 12px;cursor:pointer;color:#211e1a}
+.case-kicker{font:600 .67rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#766c60;margin:8px 0 12px}
+.case-panel h2{font:400 clamp(2rem,6vw,3.4rem)/1 var(--serif);margin:0 0 12px}
+.case-lead{font-size:.96rem;line-height:1.6;color:#554d44;margin:0 0 22px}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 26px}
+.case-grid section{border-top:1px solid #d4ccc1;padding-top:10px}
+.case-grid h3{font:600 .67rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#756b60;margin:0 0 7px}
+.case-grid p{font-size:.84rem;line-height:1.6;color:#39342e;margin:0}
+.case-note{margin-top:22px;padding:13px 15px;background:#e5ded3;border-radius:7px;font-size:.77rem;line-height:1.55;color:#51483e}
+@media(max-width:600px){.case-grid{grid-template-columns:1fr}}
+
 /* ---------- grid mode ---------- */
 body.grid .feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;
   padding-top:calc(70px + env(safe-area-inset-top,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -246,7 +264,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
       </div>
     </div>
     <div class="head"><h2><span class="clip"><span>KA1ASH STORE</span></span></h2><div class="meta">Интернет-магазин,<br>e-commerce, адаптив<br>(концепт · 2026)</div></div>
-    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Концепция магазина одежды: главная, каталог и карточка товара. Проработаны состояния корзины, выбор количества и сценарий оформления заказа.</p><p><b>Технический фокус:</b> структура каталога, адаптивные блоки, HTML/CSS/JS и логика интерфейса корзины.</p></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Интерфейс магазина одежды: витрина бренда, каталог и путь пользователя от просмотра коллекции к оформлению заказа.</p><p><b>Фокус:</b> e-commerce, адаптивная структура и сценарии корзины.</p><button class="case-open" data-case="fashion" type="button">Подробности кейса ↗</button></div>
   </section>
 
   <section class="proj v-tech" aria-label="Демонстрационный каталог электроники TECHSTORE">
@@ -259,7 +277,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
       </div>
     </div>
     <div class="head"><h2><span class="clip"><span>TECHSTORE</span></span></h2><div class="meta">Каталог товаров,<br>карточки, адаптив<br>(концепт · 2026)</div></div>
-    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Каталог электроники с категориями, карточками товаров, ценами и переходом к подробной информации. Интерфейс рассчитан на удобный просмотр с телефона и компьютера.</p><p><b>Технический фокус:</b> сетка карточек, единые компоненты, адаптивная вёрстка и интерактивные элементы.</p></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Каталог электроники с понятной навигацией по категориям, едиными карточками и переходом к подробной информации о товаре.</p><p><b>Фокус:</b> компонентная структура, адаптивная сетка и подготовка интерфейса к подключению данных.</p><button class="case-open" data-case="tech" type="button">Подробности кейса ↗</button></div>
   </section>
 
   <section class="proj v-studio" aria-label="Демонстрационный корпоративный сайт STUDIO">
@@ -272,9 +290,13 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
       </div>
     </div>
     <div class="head"><h2><span class="clip"><span>STUDIO</span></span></h2><div class="meta">Корпоративный сайт,<br>Zero Block, анимации<br>(концепт · 2026)</div></div>
-    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Презентационный сайт digital-студии: первый экран, описание услуг, блок проектов и контактный призыв к действию.</p><p><b>Технический фокус:</b> Zero Block, кастомные CSS-эффекты, анимации появления и мобильная адаптация.</p></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Корпоративный сайт digital-студии: позиционирование, описание услуг, проекты и понятный переход к обращению.</p><p><b>Фокус:</b> Zero Block, типографика, кастомные CSS-эффекты и мобильная адаптация.</p><button class="case-open" data-case="studio" type="button">Подробности кейса ↗</button></div>
   </section>
 
+
+<div class="case-dialog" id="case-dialog" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="case-title">
+ <article class="case-panel"><button class="case-close" type="button">Закрыть ×</button><div class="case-kicker">Демонстрационный концепт · 2026</div><h2 id="case-title"></h2><p class="case-lead" id="case-lead"></p><div class="case-grid" id="case-grid"></div><p class="case-note" id="case-note"></p></article>
+</div>
 </main>
 
 <section class="about" id="services">
@@ -340,6 +362,42 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
     addEventListener('scroll',()=>{ if(!ticking){ ticking=true; requestAnimationFrame(tick) } },{passive:true});
     tick();
   }
+
+
+  const caseStudies={
+    fashion:{title:'KA1ASH STORE — интернет-магазин одежды',lead:'Концепция e-commerce-проекта: выразительная витрина бренда, понятный каталог и последовательный путь пользователя от выбора коллекции к заказу.',sections:[
+      ['Бизнес-задача','Представить коллекцию одежды в едином стиле и сделать путь к покупке простым: посетитель должен быстро понять ассортимент, найти товар и перейти к оформлению заказа.'],
+      ['Структура и UX','Главная с промо-блоком и переходом в коллекцию; каталог с категориями; карточка товара с фото, размером, ценой и описанием; корзина и последовательность оформления заказа.'],
+      ['Технический подход','Для реализации на Tilda — стандартные блоки и Zero Block для нестандартной композиции. HTML/CSS — для кастомной сетки, типографики и состояний элементов. JavaScript — для дополнительной клиентской логики там, где возможностей платформы недостаточно.'],
+      ['Адаптив и контроль качества','Мобильная компоновка с удобными зонами нажатия, читаемыми подписями и перестроением карточек. Проверка на узких и широких экранах, длинных названиях и разных форматах изображений.'],
+      ['Что показывает кейс','Понимание структуры интернет-магазина, пользовательского пути, адаптивной вёрстки и выбора между стандартными возможностями Tilda и кастомным кодом.']
+    ],note:'Статус: демонстрационный визуальный концепт, не действующий магазин. Реальная товарная база, платёжный шлюз, серверная корзина и приём заказов в этом концепте не подключены.'},
+    tech:{title:'TECHSTORE — каталог электроники',lead:'Концепт каталога с акцентом на ясную навигацию, единый шаблон товарных карточек и удобное отображение ассортимента на смартфонах и компьютерах.',sections:[
+      ['Бизнес-задача','Организовать ассортимент электроники так, чтобы посетитель быстро находил нужную категорию, считывал ключевую информацию о товаре и мог перейти к подробностям.'],
+      ['Структура и UX','Категории товаров; карточки с изображением, названием и ценой; отдельная страница товара с характеристиками; заметные действия для перехода к покупке или отправки заявки.'],
+      ['Технический подход','Tilda или собственная HTML/CSS/JS-вёрстка. Повторяемые компоненты карточек, CSS Grid/Flexbox для сетки, общие правила отступов и типографики. При развитии проекта — подключение CMS или внешнего источника товарных данных.'],
+      ['Адаптив и контроль качества','Перестроение числа колонок под ширину экрана; проверка длинных названий, разного соотношения сторон изображений, цен и переполнения карточек. Сохранение одинаковой логики интерфейса на мобильных и десктопе.'],
+      ['Что показывает кейс','Навыки построения каталогов, системного оформления повторяющихся элементов, адаптивной сетки и подготовки интерфейса к интеграции с данными.']
+    ],note:'Статус: демонстрационный визуальный концепт. Поиск, фильтры, база товаров, синхронизация остатков и реальное оформление заказа не реализованы.'},
+    studio:{title:'STUDIO — корпоративный сайт digital-команды',lead:'Презентационный сайт, который помогает потенциальному клиенту быстро понять специализацию команды, изучить услуги и перейти к обсуждению проекта.',sections:[
+      ['Бизнес-задача','Создать компактную цифровую презентацию компании: ясно сформулировать позиционирование, показать направления работы и сделать контактный сценарий очевидным.'],
+      ['Структура и UX','Первый экран с позиционированием; блок услуг с короткими пояснениями; секция проектов; описание подхода к работе; контактный блок с призывом к действию.'],
+      ['Технический подход','Tilda и Zero Block для точной композиции. Кастомный CSS — для типографики, сетки, hover-состояний и визуальных эффектов. JavaScript — только для тех интерактивных элементов, где он действительно нужен.'],
+      ['Адаптив и доступность','Преобразование крупных композиций в одноколоночный поток на телефоне, сохранение контраста и читаемости, заметные состояния фокуса клавиатуры и корректная работа при reduced motion.'],
+      ['Что показывает кейс','Умение переводить бизнес-задачу в структуру страницы, работать с Zero Block и кастомными стилями, продумывать мобильную версию и использовать анимацию без перегрузки интерфейса.']
+    ],note:'Статус: демонстрационный концепт. STUDIO — условное название; это не сайт реального клиента и не подтверждение коммерческого запуска.'}
+  };
+  const dialog=document.getElementById('case-dialog'), title=document.getElementById('case-title'), lead=document.getElementById('case-lead'), grid=document.getElementById('case-grid'), note=document.getElementById('case-note');
+  let lastFocus=null;
+  function closeCase(){dialog.classList.remove('open');dialog.setAttribute('aria-hidden','true');document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+  document.querySelectorAll('[data-case]').forEach(button=>button.addEventListener('click',()=>{
+    const item=caseStudies[button.dataset.case];if(!item)return;lastFocus=button;title.textContent=item.title;lead.textContent=item.lead;note.textContent=item.note;grid.replaceChildren();
+    item.sections.forEach(([heading,copy])=>{const section=document.createElement('section'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=heading;p.textContent=copy;section.append(h,p);grid.append(section)});
+    dialog.classList.add('open');dialog.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';dialog.querySelector('.case-close').focus();
+  }));
+  dialog.querySelector('.case-close').addEventListener('click',closeCase);
+  dialog.addEventListener('click',event=>{if(event.target===dialog)closeCase()});
+  addEventListener('keydown',event=>{if(event.key==='Escape'&&dialog.classList.contains('open'))closeCase()});
 
   // nav highlight
   const links=[...document.querySelectorAll('.nav a')];
