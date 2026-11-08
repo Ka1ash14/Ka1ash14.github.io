@@ -208,6 +208,17 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
   .proj .bg{transform:none!important}
   html{scroll-behavior:auto}
 }
+
+/* Responsive case-card safety: keep text wrapping and card content in flow */
+.proj,.proj .head,.proj .info,.proj .meta,.proj .info p{min-width:0;max-width:100%;}
+.proj .head{align-items:flex-start;gap:clamp(12px,2vw,28px);}
+.proj .head h2,.proj .head .clip,.proj .head .clip span{min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:normal;}
+.proj .meta{flex:0 1 180px;white-space:normal;overflow-wrap:anywhere;line-height:1.45;}
+.proj .info{display:flex;flex-direction:column;align-items:flex-start;gap:12px;}
+.proj .info p{margin:0;line-height:1.65;overflow-wrap:anywhere;word-break:normal;}
+.proj .case-open{display:inline-flex;align-items:center;justify-content:center;max-width:100%;white-space:normal;text-align:center;line-height:1.35;overflow-wrap:anywhere;padding:10px 15px;border:1px solid #8f7aff88;border-radius:30px;color:#e7e0ff;background:#7557ff18;font:600 12px/1.35 inherit;}
+.proj .case-open:hover{background:#7658ff35;border-color:#a493ff;}
+@media(max-width:700px){.proj .head{flex-direction:column;gap:8px}.proj .meta{flex:0 1 auto}.proj .info{gap:10px}.proj .info p{font-size:14px;}}
 </style>
 </head>
 <body>
@@ -252,7 +263,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
     <div class="info">
       <span class="kind live">Учебный проект · живой сайт</span>
       <p>Онлайн-журнал о беге: обложка номера, слово редактора, оглавление и четыре статьи по одному шаблону. Адаптив и SEO для каждой страницы.</p>
-      <a class="go" href="https://patiently-positive-thrush.tilda.ws" target="_blank" rel="noopener">Открыть сайт ↗</a>
+      <a class="case-open" href="/projects/tempo-magazine.html">Подробности кейса ↗</a><a class="go" href="https://patiently-positive-thrush.tilda.ws" target="_blank" rel="noopener">Открыть сайт ↗</a>
     </div>
   </section>
 
@@ -273,7 +284,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
     </div>
     <div class="info">
       <span class="kind">Рабочий проект</span>
-      <p>Клиент сам выбирает услугу, день и свободное время. Защита от двойной записи, «Мои записи» с отменой, уведомления и команды /admin и /stats для мастера.</p>
+      <p>Клиент сам выбирает услугу, день и свободное время. Защита от двойной записи, «Мои записи» с отменой, уведомления и команды /admin и /stats для мастера.</p><a class="case-open" href="/projects/booking-bot.html">Подробности кейса ↗</a>
     </div>
   </section>
 
@@ -293,7 +304,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
     </div>
     <div class="info">
       <span class="kind">Учебный концепт</span>
-      <p>Одностраничник малого бизнеса: оффер, меню, отзывы, контакты и заказ в Telegram.</p>
+      <p>Одностраничник малого бизнеса: оффер, меню, отзывы, контакты и заказ в Telegram.</p><a class="case-open" href="/projects/zerno-cafe.html">Подробности кейса ↗</a>
     </div>
   </section>
 
@@ -307,7 +318,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
       </div>
     </div>
     <div class="head"><h2><span class="clip"><span>KA1ASH STORE</span></span></h2><div class="meta">Интернет-магазин,<br>e-commerce, адаптив<br>(концепт · 2026)</div></div>
-    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Интерфейс магазина одежды: витрина бренда, каталог и путь пользователя от просмотра коллекции к оформлению заказа.</p><p><b>Фокус:</b> e-commerce, адаптивная структура и сценарии корзины.</p><button class="case-open" data-case="fashion" type="button">Подробности кейса ↗</button></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Интерфейс магазина одежды: витрина бренда, каталог и путь пользователя от просмотра коллекции к оформлению заказа.</p><p><b>Фокус:</b> e-commerce, адаптивная структура и сценарии корзины.</p><a class="case-open" href="/projects/ka1ash-store.html">Подробности кейса ↗</a></div>
   </section>
 
   <section class="proj v-tech" aria-label="Демонстрационный каталог электроники TECHSTORE">
@@ -320,7 +331,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
       </div>
     </div>
     <div class="head"><h2><span class="clip"><span>TECHSTORE</span></span></h2><div class="meta">Каталог товаров,<br>карточки, адаптив<br>(концепт · 2026)</div></div>
-    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Каталог электроники с понятной навигацией по категориям, едиными карточками и переходом к подробной информации о товаре.</p><p><b>Фокус:</b> компонентная структура, адаптивная сетка и подготовка интерфейса к подключению данных.</p><button class="case-open" data-case="tech" type="button">Подробности кейса ↗</button></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Каталог электроники с понятной навигацией по категориям, едиными карточками и переходом к подробной информации о товаре.</p><p><b>Фокус:</b> компонентная структура, адаптивная сетка и подготовка интерфейса к подключению данных.</p><a class="case-open" href="/projects/techstore.html">Подробности кейса ↗</a></div>
   </section>
 
   <section class="proj v-studio" aria-label="Демонстрационный корпоративный сайт STUDIO">
@@ -333,7 +344,7 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
       </div>
     </div>
     <div class="head"><h2><span class="clip"><span>STUDIO</span></span></h2><div class="meta">Корпоративный сайт,<br>Zero Block, анимации<br>(концепт · 2026)</div></div>
-    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Корпоративный сайт digital-студии: позиционирование, описание услуг, проекты и понятный переход к обращению.</p><p><b>Фокус:</b> Zero Block, типографика, кастомные CSS-эффекты и мобильная адаптация.</p><button class="case-open" data-case="studio" type="button">Подробности кейса ↗</button></div>
+    <div class="info"><span class="kind">Демонстрационный концепт</span><p>Корпоративный сайт digital-студии: позиционирование, описание услуг, проекты и понятный переход к обращению.</p><p><b>Фокус:</b> Zero Block, типографика, кастомные CSS-эффекты и мобильная адаптация.</p><a class="case-open" href="/projects/studio.html">Подробности кейса ↗</a></div>
   </section>
 
 
