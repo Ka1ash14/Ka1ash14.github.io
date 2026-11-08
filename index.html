@@ -379,6 +379,32 @@ body.grid .chat,body.grid .land{transform:scale(.8) rotate(-3deg)}
   .v-subscription .sub-phone{width:clamp(72px,24vw,98px)}
   .v-subscription>.info{padding-left:18px;padding-right:18px}
 }
+
+/* High-contrast labels and description panels */
+.proj>.head .meta{
+  color:#211a16!important;background:rgba(250,247,240,.97)!important;
+  border:1px solid rgba(255,255,255,.72);border-radius:9px;display:inline-block;
+  width:fit-content;max-width:min(34ch,calc(100% - 4px));padding:8px 11px!important;
+  line-height:1.5;text-shadow:none!important;mix-blend-mode:normal!important;
+  opacity:1!important;box-shadow:0 4px 18px rgba(0,0,0,.16);
+}
+.proj>.info{
+  color:#fff!important;background:rgba(13,15,22,.96)!important;
+  border:1px solid rgba(255,255,255,.18);border-radius:16px;
+  padding:16px 18px!important;box-shadow:0 12px 34px rgba(0,0,0,.28);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.proj>.info p{color:#f5f2ec!important;text-shadow:none!important}
+.proj>.info .kind{color:#e8ddff!important;border-color:#a995ff!important;background:rgba(121,91,220,.18)}
+.proj>.info .go,.proj>.info .case-open{color:#fff!important;text-shadow:none!important}
+@media(max-width:760px){
+ .proj>.head .meta{font-size:.68rem;max-width:min(34ch,calc(100% - 36px))}
+ .proj>.info{margin:0 18px;padding:15px 16px!important;width:auto}
+}
+@media(max-width:420px){
+ .proj>.head .meta{padding:7px 9px!important;font-size:.62rem}
+ .proj>.info{margin:0 14px;padding:13px 14px!important}
+}
 </style>
 </head>
 <body>
