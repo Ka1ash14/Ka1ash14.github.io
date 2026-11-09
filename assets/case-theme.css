@@ -31,3 +31,21 @@ html{scroll-padding-top:24px}body{background:radial-gradient(ellipse at 85% 0%,#
 @media(max-width:800px){.hero{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{flex-direction:column;align-items:start}}
 @media(max-width:560px){.wrap{width:calc(100% - 36px)}.hero h1{font-size:clamp(34px,10vw,48px)}.lead{font-size:16px}.back{font-size:12px}.brand{font-size:17px;gap:6px}.brand small{font-size:10px!important}.features,.flow,.split{grid-template-columns:1fr}.cta,.end{flex-direction:column;align-items:start}footer{flex-wrap:wrap;gap:12px}.section-head p{max-width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.booking-demo {
+  gap: 12px;
+  margin: 0;
+}
+.booking-demo video {
+  display: block;
+  width: min(100%, 340px);
+  height: auto;
+  border-radius: 12px;
+  background: #181a18;
+}
+.booking-demo figcaption {
+  max-width: 340px;
+  color: var(--muted);
+  font-size: .875rem;
+  text-align: center;
+}
