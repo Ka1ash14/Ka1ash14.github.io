@@ -614,6 +614,10 @@ html.ka-cursor-enabled a,html.ka-cursor-enabled button{cursor:pointer!important}
 @media(max-width:360px){.ka-header .brand-copy{display:none}.ka-nav{font-size:.7rem;gap:12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto!important}}
 </style>
+<style id="service-rework-styles">
+.service-rework .service-intro{margin:0 0 clamp(52px,8vw,100px)}.service-rework .service-intro .lead{max-width:950px;margin:0 0 22px}.service-subtitle{max-width:670px;color:#a9a29c;font-size:clamp(16px,2vw,21px);line-height:1.6;margin:0}.service-group-label{display:flex;justify-content:space-between;gap:16px;color:#bda18e;font:500 11px/1.5 'JetBrains Mono',monospace;letter-spacing:.09em;text-transform:uppercase;margin:50px 0 15px}.service-group-label span:last-child{color:#8e8580;text-align:right}.service-list{border-top:1px solid #403a36}.service-item{border-bottom:1px solid #403a36}.service-item summary{display:grid;grid-template-columns:70px minmax(0,1fr) 38px;gap:18px;align-items:start;cursor:pointer;list-style:none;padding:28px 0;transition:padding .25s ease}.service-item summary::-webkit-details-marker{display:none}.service-num{font:13px/1.8 'JetBrains Mono',monospace;color:#9f948b}.service-name{font-family:'Fraunces',Georgia,serif;font-size:clamp(28px,4.2vw,53px);font-weight:300;line-height:1.12;color:#eee9e4;letter-spacing:-.025em}.service-name small{display:block;margin-top:11px;font:400 clamp(13px,1.45vw,17px)/1.4 Arial,sans-serif;letter-spacing:0;color:#99918a}.service-plus{justify-self:end;border:1px solid #61554c;color:#d6bba7;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;font-size:20px;transition:transform .25s,background .25s}.service-item[open] .service-plus{transform:rotate(45deg);background:#302924}.service-item summary:hover .service-name{color:#d8b9a1}.service-item summary:focus-visible{outline:2px solid #d8b9a1;outline-offset:4px}.service-detail{padding:0 55px 32px 88px;max-width:760px}.service-detail p{margin:0 0 19px;color:#b4aca6;font-size:clamp(15px,1.6vw,19px);line-height:1.65}.service-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.service-tags span{border:1px solid #4b413b;border-radius:100px;padding:6px 11px;color:#bda99a;font:11px/1.2 'JetBrains Mono',monospace}.service-detail a{color:#e6c6ac;text-decoration:none;border-bottom:1px solid #9c7c68;padding-bottom:5px;font-size:14px}.service-detail a:hover{color:#fff}.service-cta{display:flex;align-items:end;justify-content:space-between;gap:28px;background:#211e1b;border:1px solid #453c35;border-radius:4px;padding:clamp(25px,4vw,50px);margin:70px 0 95px}.service-kicker{font:11px 'JetBrains Mono',monospace;letter-spacing:.1em;color:#bda18e}.service-cta h3{font:300 clamp(30px,4vw,48px)/1.15 'Fraunces',Georgia,serif;color:#eee9e4;margin:15px 0}.service-cta p{color:#a9a19a;max-width:500px;line-height:1.6;margin:0}.service-cta>a{display:flex;justify-content:space-between;gap:22px;align-items:center;flex-shrink:0;background:#d5b8a2;color:#171412;text-decoration:none;padding:17px 20px;font-size:14px;transition:background .2s,transform .2s}.service-cta>a:hover{background:#f0d3bd;transform:translateY(-2px)}@media(max-width:650px){.service-item summary{grid-template-columns:32px minmax(0,1fr) 30px;gap:12px;padding:25px 0}.service-name{font-size:clamp(25px,7.5vw,37px)}.service-name small{font-size:13px}.service-plus{width:29px;height:29px;font-size:16px}.service-detail{padding:0 0 28px 44px}.service-cta{display:block;margin:55px 0 75px}.service-cta>a{margin-top:25px;width:100%;box-sizing:border-box}.service-group-label{margin-top:40px}}
+@media(prefers-reduced-motion:reduce){.service-item summary,.service-plus,.service-cta>a{transition:none}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#work">Перейти к проектам</a>
@@ -757,33 +761,36 @@ html.ka-cursor-enabled a,html.ka-cursor-enabled button{cursor:pointer!important}
 
 </main>
 
-<section class="about" id="services">
+<section class="about service-rework" id="services">
   <div class="in">
-    <div class="lab">Услуги</div>
-    <div style="display:flex;flex-direction:column;gap:40px">
-      <p class="lead">Делаю сайты на Tilda и на коде, собираю Telegram-боты. Сроки и цену называю до начала работы.</p>
-      <div class="rows">
-        <div class="row"><i>01</i><b>Сайты на Tilda</b><span>Лендинги и многостраничники, перенос контента из вёрстки, адаптив, title и description для каждой страницы.</span></div>
-        <div class="row"><i>02</i><b>Сайты на коде</b><span>HTML, CSS, JavaScript: быстрые страницы без конструктора, анимации, тёмная тема.</span></div>
-        <div class="row"><i>03</i><b>Telegram-боты</b><span>Запись клиентов, заявки, уведомления, админ-команды. Python, SQLite, запуск по инструкции.</span></div>
-      </div>
+    <div class="lab">Услуги / What I do</div>
+    <div class="service-intro">
+      <p class="lead">Идеи, которые обретают форму.</p>
+      <p class="service-subtitle">Создаю сайты, Telegram-ботов и интерактивные проекты в Unreal Engine 5. От первого обсуждения до результата — с понятными этапами, сроками и стоимостью.</p>
     </div>
-
+    <div class="service-group-label"><span>01 / DIGITAL</span><span>Сайты и автоматизация</span></div>
+    <div class="service-list">
+      <details class="service-item"><summary><span class="service-num">01</span><span class="service-name">Сайты на Tilda<small>Лендинги и многостраничные сайты</small></span><span class="service-plus" aria-hidden="true">↗</span></summary><div class="service-detail"><p>Сайт, который понятно представляет ваш продукт, вызывает доверие и помогает получать обращения. Собираю страницы, настраиваю адаптивность и базовые SEO-параметры.</p><div class="service-tags"><span>Tilda</span><span>Адаптивность</span><span>SEO</span></div><a href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить сайт ↗</a></div></details>
+      <details class="service-item"><summary><span class="service-num">02</span><span class="service-name">Сайты на коде<small>Индивидуальная разработка</small></span><span class="service-plus" aria-hidden="true">↗</span></summary><div class="service-detail"><p>Разрабатываю адаптивные сайты без конструктора: с индивидуальным оформлением, анимациями и вниманием к скорости и удобству на разных устройствах.</p><div class="service-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить разработку ↗</a></div></details>
+      <details class="service-item"><summary><span class="service-num">03</span><span class="service-name">Telegram-боты<small>Автоматизация повседневных задач</small></span><span class="service-plus" aria-hidden="true">↗</span></summary><div class="service-detail"><p>Боты для заявок, записи клиентов, уведомлений и простых сценариев взаимодействия. Помогаю сократить ручную работу и сделать общение с клиентами удобнее.</p><div class="service-tags"><span>Python</span><span>Telegram Bot API</span><span>SQLite</span></div><a href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить бота ↗</a></div></details>
+    </div>
+    <div class="service-group-label"><span>02 / REAL-TIME 3D</span><span>Unreal Engine 5</span></div>
+    <div class="service-list">
+      <details class="service-item"><summary><span class="service-num">04</span><span class="service-name">3D-сцены и окружения<small>Атмосфера, свет и детали</small></span><span class="service-plus" aria-hidden="true">↗</span></summary><div class="service-detail"><p>Создаю виртуальные пространства и выразительные окружения в Unreal Engine 5. Работаю с композицией, материалами, постановкой света и общей атмосферой сцены.</p><div class="service-tags"><span>UE5</span><span>Environment</span><span>Lighting</span></div><a href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить 3D-сцену ↗</a></div></details>
+      <details class="service-item"><summary><span class="service-num">05</span><span class="service-name">Blueprints и игровая логика<small>Интерактивные механики</small></span><span class="service-plus" aria-hidden="true">↗</span></summary><div class="service-detail"><p>Добавляю взаимодействия с объектами, события, триггеры и игровые механики с помощью визуального программирования Blueprints.</p><div class="service-tags"><span>Blueprints</span><span>Interactions</span><span>Logic</span></div><a href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить механику ↗</a></div></details>
+      <details class="service-item"><summary><span class="service-num">06</span><span class="service-name">Синематики и рендер<small>Кинематографичная подача</small></span><span class="service-plus" aria-hidden="true">↗</span></summary><div class="service-detail"><p>Настраиваю камеры, движение, освещение и рендер в UE5, чтобы эффектно показать атмосферу, окружение или идею проекта.</p><div class="service-tags"><span>Sequencer</span><span>Cinematics</span><span>Rendering</span></div><a href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить синематику ↗</a></div></details>
+    </div>
+    <div class="service-cta"><div><span class="service-kicker">ВАШ ПРОЕКТ — СЛЕДУЮЩИЙ?</span><h3>Давайте обсудим вашу идею.</h3><p>Расскажите о задаче. Предложу подход и заранее согласуем сроки и стоимость.</p></div><a href="https://t.me/yuonger61" target="_blank" rel="noopener">Написать в Telegram <span aria-hidden="true">↗</span></a></div>
     <div class="lab">Как работаю</div>
     <div class="rows">
-      <div class="row"><i>1</i><b>Разбираю задачу</b><span>Смотрю ваш сайт или пример, задаю вопросы, называю срок и цену.</span></div>
-      <div class="row"><i>2</i><b>Делаю по этапам</b><span>Показываю промежуточный результат, правки вносим сразу.</span></div>
-      <div class="row"><i>3</i><b>Проверяю и сдаю</b><span>Адаптив, ссылки, SEO. После сдачи помогаю с мелкими правками.</span></div>
+      <div class="row"><i>1</i><b>Разбираю задачу</b><span>Обсуждаем цели, примеры и объём работы. Согласуем сроки и стоимость до старта.</span></div>
+      <div class="row"><i>2</i><b>Показываю прогресс</b><span>Работаю по этапам, демонстрирую промежуточный результат и обсуждаю правки.</span></div>
+      <div class="row"><i>3</i><b>Проверяю и передаю</b><span>Проверяю результат в рамках задачи и объясняю, как пользоваться готовым проектом.</span></div>
     </div>
-
     <div class="lab" id="contact">Контакты</div>
-    <div class="contact">
-      Telegram <a href="https://t.me/yuonger61" target="_blank" rel="noopener">@yuonger61 ↗</a><br>
-      <a href="https://github.com/Ka1ash14" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
+    <div class="contact">Telegram <a href="https://t.me/yuonger61" target="_blank" rel="noopener">@yuonger61 ↗</a><br><a href="https://github.com/Ka1ash14" target="_blank" rel="noopener">GitHub ↗</a></div>
   </div>
 </section>
-
 <script>
 (function(){
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
