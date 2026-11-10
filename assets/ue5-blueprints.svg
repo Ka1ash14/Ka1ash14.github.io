@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0v28" fill="none" stroke="#372d26"/></pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path fill="#caa487" d="m0 0 8 4-8 4z"/></marker>
+  </defs>
+  <path fill="#1a1613" d="M0 0h960v600H0z"/>
+  <path fill="url(#grid)" d="M0 0h960v600H0z"/>
+  <g fill="none" stroke="#caa487" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M280 288h82"/><path d="M598 272h82"/><path d="M480 352v108h200"/>
+  </g>
+  <g fill="#2a211c" stroke="#8f6f59" stroke-width="2">
+    <rect x="54" y="224" width="226" height="128" rx="14"/><rect x="366" y="224" width="232" height="128" rx="14"/>
+    <rect x="684" y="208" width="222" height="128" rx="14"/><rect x="684" y="396" width="222" height="128" rx="14"/>
+  </g>
+  <g font-family="monospace">
+    <text x="54" y="57" font-size="16" fill="#ead2b6" letter-spacing="2">RUBEZH / 02</text>
+    <text x="54" y="84" font-size="15" fill="#bfa48d" letter-spacing="2">INTERACTION LOGIC</text>
+    <g fill="#e9c5ad" font-size="16"><text x="76" y="259">01 / INPUT</text><text x="388" y="259">02 / CONDITION</text><text x="706" y="243">03 / POWER ON</text><text x="706" y="431">04 / POWER OFF</text></g>
+    <g fill="#f4e8dc" font-size="24"><text x="76" y="305">Interact</text><text x="388" y="305">HasPower?</text><text x="706" y="289">Open door</text><text x="706" y="477">Show hint</text></g>
+  </g>
+  <path fill="none" stroke="#745a49" d="M54 118h852"/>
+</svg>

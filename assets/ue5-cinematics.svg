@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#46362e"/><stop offset="1" stop-color="#9c7963"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#f5d4a4" stop-opacity=".68"/><stop offset="1" stop-color="#f5d4a4" stop-opacity="0"/></radialGradient>
+    <clipPath id="frames"><rect x="42" y="146" width="280" height="322"/><rect x="340" y="146" width="280" height="322"/><rect x="638" y="146" width="280" height="322"/></clipPath>
+  </defs>
+  <path fill="#1a1613" d="M0 0h960v600H0z"/>
+  <g clip-path="url(#frames)">
+    <path fill="url(#sky)" d="M42 146h876v322H42z"/>
+    <path fill="#6a574b" d="m42 349 99-126 48 66 71-108 62 72v215H42z"/>
+    <path fill="#b79a80" d="m220 242 40-61 37 42-27-15-10 6-8-9z"/>
+    <path fill="#352d27" d="m42 365 93-38 64 34 64-34 59 22v119H42z"/>
+    <path fill="#aa8165" d="m72 468 75-55 55-11 37-36 14 2-41 43-52 16-46 41z"/>
+    <path fill="#251e19" d="m219 330 36-14 40 13v42l-38 12-38-9z"/>
+    <path stroke="#edbd8b" stroke-width="3" d="m233 348 12 3"/>
+    <path fill="#352922" d="M340 146h280v322H340z"/>
+    <path fill="#211c18" d="m346 185 241-27v266l-241 44z"/>
+    <path fill="#4f3c30" stroke="#8b6a53" stroke-width="3" d="m374 206 188-25v226l-188 31z"/>
+    <path fill="#201915" d="m457 195 19-3v230l-19 3z"/>
+    <ellipse cx="534" cy="264" rx="54" ry="72" fill="url(#light)"/>
+    <rect x="521" y="239" width="30" height="52" rx="4" fill="#211c18" stroke="#c49b78"/>
+    <circle cx="536" cy="252" r="6" fill="#f5c68f"/>
+    <path fill="#69574d" d="m638 335 91-83 61 44 77-103 51 63v212H638z"/>
+    <path fill="#382e28" d="m638 398 111-32 66 23 103-29v108H638z"/>
+    <path fill="none" stroke="#211a17" stroke-width="5" d="M805 409V268m-26 141 26-119 26 119m-43-63h34m-29 31h25"/>
+    <path fill="#ac8870" stroke="#211a17" stroke-width="4" d="M810 293q-60-10-61-60l88 33q-10 20-27 27z"/>
+    <path stroke="#211a17" stroke-width="3" d="m810 292 8-34 24-22"/>
+    <ellipse cx="843" cy="235" rx="61" ry="66" fill="url(#light)"/><circle cx="843" cy="235" r="4" fill="#ffe2ae"/>
+  </g>
+  <g fill="#e9c5ad" font-family="monospace" font-size="16" letter-spacing="2">
+    <text x="42" y="55">RUBEZH / 03</text><text x="42" y="82" opacity=".75">STORYBOARD / 20 SEC</text>
+    <text x="42" y="514">01 / 00—06</text><text x="340" y="514">02 / 06—12</text><text x="638" y="514">03 / 12—20</text>
+  </g>
+  <path fill="none" stroke="#745a49" d="M42 115h876m-876 429h876"/>
+</svg>
