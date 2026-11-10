@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Монтаж вертикальных видео для Shorts, Reels и VK Клипов. Два демонстрационных ролика: кофейное промо и фрагмент интервью с русскими субтитрами.">
+  <title>Монтаж коротких видео | KA1ASH</title>
+  <link rel="canonical" href="https://ka1ash14.github.io/editing/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Монтаж коротких видео | KA1ASH">
+  <meta property="og:description" content="Вертикальные ролики из ваших исходников, с субтитрами и подготовкой под площадку.">
+  <meta property="og:url" content="https://ka1ash14.github.io/editing/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/case-layout.css">
+  <link rel="stylesheet" href="/assets/case-theme.css">
+  <style>
+    .editing-hero { padding-block: clamp(48px, 7vw, 100px); grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); }
+    .editing-hero h1 { max-width: 13ch; overflow-wrap: normal; }
+    .editing-card { padding: clamp(24px, 4vw, 40px); }
+    .editing-card h2 { margin: 8px 0; font: 400 clamp(24px, 3vw, 34px)/1.15 Fraunces, Georgia, serif; }
+    .editing-card ul { padding-left: 20px; margin-bottom: 0; color: var(--muted); }
+    .editing-card li + li { margin-top: 8px; }
+    .editing-watch { color: #e9c5ad; border: 1px solid #79614f; background: transparent; }
+    .editing-works { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .editing-work { display: grid; grid-template-rows: auto auto 1fr; gap: 16px; padding: clamp(16px, 3vw, 30px); }
+    .editing-work h3 { margin: 6px 0 0; font: 400 clamp(26px, 3.2vw, 40px)/1.15 Fraunces, Georgia, serif; }
+    .editing-work .kicker { display: block; }
+    .editing-work video {
+      display: block;
+      width: min(100%, 330px);
+      height: auto;
+      aspect-ratio: 9 / 16;
+      margin-inline: auto;
+      border-radius: 10px;
+      background: var(--bg);
+    }
+    .editing-work p { margin: 0; }
+    .editing-credits { margin-top: 12px; color: var(--muted); font-size: 13px; }
+    .editing-credits summary { cursor: pointer; width: fit-content; min-height: 44px; line-height: 44px; color: #e9c5ad; }
+    .editing-credits a { color: #e9c5ad; text-decoration: underline; text-underline-offset: .2em; }
+    @media (max-width: 800px) { .editing-hero { grid-template-columns: minmax(0, 1fr); } }
+    @media (max-width: 650px) { .editing-works { grid-template-columns: minmax(0, 1fr); } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#editing-content">Перейти к содержанию</a>
+  <header class="wrap">
+    <a class="brand" href="/" aria-label="KA1ASH — на главную"><span class="mark" aria-hidden="true">K</span> KA1ASH</a>
+    <a class="back" href="/#services">← Все услуги</a>
+  </header>
+  <main id="editing-content" tabindex="-1">
+    <div class="wrap hero editing-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Видеомонтаж · удалённо</span>
+        <h1>Монтаж <span class="gradient">коротких видео</span></h1>
+        <p class="lead">Соберу вертикальные ролики из ваших исходников. Уберу паузы, выделю ключевые моменты и добавлю читаемые субтитры.</p>
+        <div class="case-links">
+          <a class="button" href="https://t.me/yuonger61" target="_blank" rel="noopener">Обсудить монтаж ↗</a>
+          <a class="button editing-watch" href="#editing-works">Смотреть работы ↓</a>
+        </div>
+      </div>
+      <aside class="card editing-card" aria-labelledby="deliverables">
+        <span class="kicker">Формат 9:16</span>
+        <h2 id="deliverables">Один ролик или серия</h2>
+        <ul>
+          <li>Разговорные ролики для Shorts, Reels и VK Клипов</li>
+          <li>Нарезка фрагментов из интервью и подкастов</li>
+          <li>Короткие проморолики из готовых кадров</li>
+        </ul>
+      </aside>
+    </div>
+    <section class="content" id="editing-works" aria-labelledby="editing-works-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Демонстрационные работы</span>
+          <h2 id="editing-works-title">Два ролика, два формата</h2>
+        </div>
+        <div class="editing-works">
+          <article class="card editing-work">
+            <div>
+              <span class="kicker">01 / Промо · 16 с</span>
+              <h3 id="coffee-video-title">Тихое утро</h3>
+            </div>
+            <video controls playsinline preload="none" width="720" height="1280" poster="/assets/editing/quiet-morning.webp" aria-labelledby="coffee-video-title">
+              <source src="/assets/editing/quiet-morning.mp4" type="video/mp4">
+              <a href="/assets/editing/quiet-morning.mp4">Открыть видео «Тихое утро»</a>
+            </video>
+            <div>
+              <p>Промо фильтр-кофе для вымышленного бренда. Пять планов, финальный титр и звук приготовления, собранный под смену кадров.</p>
+              <details class="editing-credits">
+                <summary>Источники и лицензии</summary>
+                <p>Кадры, звуки воды и посуды — <a href="https://mixkit.co/license/">Mixkit</a>. Музыка — Diego Nava, Beautiful Dream. Звук <a href="https://freesound.org/people/RobinMetzler/sounds/539319/">зёрен</a> и <a href="https://freesound.org/people/Maajora/sounds/432775/">наливаемого кофе</a> — Freesound, CC0.</p>
+              </details>
+            </div>
+          </article>
+          <article class="card editing-work">
+            <div>
+              <span class="kicker">02 / Интервью · 39 с</span>
+              <h3 id="karpov-video-title">Матч, которого не было</h3>
+            </div>
+            <video controls playsinline preload="none" width="720" height="1280" poster="/assets/editing/karpov-fischer.webp" aria-labelledby="karpov-video-title">
+              <source src="/assets/editing/karpov-fischer.mp4" type="video/mp4">
+              <a href="/assets/editing/karpov-fischer.mp4">Открыть видео «Матч, которого не было»</a>
+            </video>
+            <div>
+              <p>Анатолий Карпов о несостоявшемся матче с Бобби Фишером. Архивное интервью в вертикальном кадре с чёрно-белым цветом и русскими субтитрами.</p>
+              <details class="editing-credits">
+                <summary>Источник и лицензия</summary>
+                <p><a href="https://www.youtube.com/watch?v=mPd1VdtAkOM">Интервью GibChess, 2020</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Изменения: сокращение, кадрирование, цвет, обработка звука и перевод.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="content" aria-labelledby="request-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Как начать</span>
+          <h2 id="request-title">Что прислать для оценки</h2>
+          <p>По этим материалам смогу предложить объём работ, срок и стоимость.</p>
+        </div>
+        <ol class="card editing-card">
+          <li>Ссылку на исходники или описание того, что планируете снять.</li>
+          <li>Площадку, число роликов и пример нужного стиля, если он есть.</li>
+          <li>Желаемую дату готовности.</li>
+        </ol>
+        <div class="case-links"><a class="button" href="https://t.me/yuonger61" target="_blank" rel="noopener">Написать в Telegram ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© 2026 Ka1ash14</span><a href="/#services">Все услуги ↑</a></footer>
+</body>
+</html>
