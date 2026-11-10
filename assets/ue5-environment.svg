@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#201d1b"/><stop offset="1" stop-color="#8e6f58"/>
+    </linearGradient>
+    <radialGradient id="haze">
+      <stop stop-color="#ead0a4" stop-opacity=".55"/><stop offset="1" stop-color="#ead0a4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#57463c"/><stop offset="1" stop-color="#181513"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h960v600H0z"/>
+  <ellipse cx="642" cy="212" rx="440" ry="246" fill="url(#haze)"/>
+  <circle cx="678" cy="158" r="35" fill="#ebcba0" opacity=".8"/>
+  <path fill="#7a6557" d="m0 300 139-111 50 32L312 95l73 78 38 24 35 54 126-93 63 60 38-29 61 41 114-108 100 86v286H0z"/>
+  <path fill="#a68a74" d="m258 151 54-56 73 78-50-27-19 8-14-27zm538 29 64-58 76 65-72-40-13 19-23-5z"/>
+  <path fill="#50463f" d="m0 248 87 54 76-33 106 46 55 61 156-62 92 24 89-34 55 40 119-79 125 45v290H0z"/>
+  <path fill="url(#ground)" d="m0 379 145-41 190 75 109-27 134 23 170-38 212 24v205H0z"/>
+  <path fill="#9c7860" opacity=".64" d="m42 600 174-94 159-32 75-68 72-16 15 10-73 23-65 69-132 42-87 66z"/>
+  <path fill="none" stroke="#d9b38d" stroke-width="2" stroke-dasharray="6 8" d="m104 567 122-52 160-32 72-69 67-22 111-32 96-25"/>
+  <path fill="#1d1a17" d="m454 295 113-48 131 31v117l-119 34-125-30z"/>
+  <path fill="#443731" d="m454 295 125 25v109l-125-30z"/>
+  <path fill="#75584a" d="m454 295 113-48 131 31-119 42z"/>
+  <path fill="#322923" stroke="#9b7560" stroke-width="4" d="m495 328 53 12v67l-53-13z"/>
+  <path fill="#f0c18d" d="m503 338 37 8v6l-37-8zm88 4 87-28v5l-87 28z"/>
+  <path fill="none" stroke="#211c19" stroke-width="5" d="M728 365V209m-18 156 18-105 18 101m-37-120h38m-36 68h33"/>
+  <path fill="#9b7c68" stroke="#211c19" stroke-width="4" d="M730 240q-44-10-47-52l68 24q-3 18-21 28z"/>
+  <path fill="none" stroke="#211c19" stroke-width="3" d="m730 240 6-35 16-18"/>
+  <path fill="#211c19" d="m0 525 65-39 66 5 48 28-136 81H0zm960-48-123-10-96 62-108 71h327z"/>
+  <g fill="#ead2b6" font-family="monospace" font-size="15" letter-spacing="2">
+    <text x="44" y="51">RUBEZH / 01</text><text x="44" y="75" opacity=".72">ENVIRONMENT STUDY</text>
+  </g>
+  <g fill="#201914" stroke="#e9c5ad" stroke-width="2">
+    <circle cx="224" cy="514" r="16"/><circle cx="521" cy="387" r="16"/><circle cx="733" cy="332" r="16"/>
+  </g>
+  <g fill="#f3e3d0" text-anchor="middle" font-family="monospace" font-size="14">
+    <text x="224" y="519">01</text><text x="521" y="392">02</text><text x="733" y="337">03</text>
+  </g>
+</svg>

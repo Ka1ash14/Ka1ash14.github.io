@@ -1,0 +1,58 @@
+.ue5-collection {
+  position: relative;
+  z-index: 19;
+  padding: clamp(44px, 7vw, 100px) max(6vw, 24px);
+  background: radial-gradient(ellipse at 85% 0%, #30231c, transparent 55%), var(--bg);
+  border-top: 1px solid var(--line);
+}
+.ue5-collection h2 {
+  margin: 12px 0;
+  font: 400 clamp(2.3rem, 5vw, 4.6rem)/1.06 var(--serif);
+  letter-spacing: -.035em;
+}
+.ue5-collection > p { max-width: 55ch; color: #bfb3a9; line-height: 1.65; }
+.ue5-jump { display: inline-flex; align-items: center; min-height: 44px; color: var(--pill); text-decoration: underline; text-underline-offset: .28em; }
+.ue5-list, .ue5-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+  margin: 28px 0 0;
+}
+.ue5-tile {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #4f4137;
+  border-radius: 16px;
+  background: #1b1714;
+  color: inherit;
+  text-decoration: none;
+}
+.ue5-tile:hover { border-color: #e9c5ad; }
+.ue5-tile img, .ue5-visual img { display: block; width: 100%; height: auto; }
+.ue5-tile-copy { display: grid; gap: 10px; padding: 20px; flex: 1; }
+.ue5-tile h3 { margin: 0; font: 400 1.65rem/1.16 var(--serif); }
+.ue5-tile p { margin: 0; color: #bfb3a9; font-size: .9rem; line-height: 1.6; }
+.ue5-label { color: #e9c5ad; font-size: .75rem; letter-spacing: .06em; }
+.ue5-tile-action { align-self: end; color: #e9c5ad; font-size: .85rem; }
+
+.ue5-case .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); }
+.ue5-visual { margin: 0; min-width: 0; }
+.ue5-visual img { border: 1px solid var(--line); border-radius: 16px; }
+.ue5-steps { list-style: none; padding: 0; }
+.ue5-steps .kicker { display: block; margin-bottom: 10px; }
+.ue5-case .note { margin-top: 24px; }
+.ue5-case .case-links a { min-height: 44px; display: inline-flex; align-items: center; }
+.ue5-related { margin: 32px 0 52px; }
+.ue5-related .case-links { gap: 12px 24px; }
+.ue5-related a { color: #e9c5ad; text-decoration: underline; text-underline-offset: .28em; }
+.ue5-demo { margin-top: 24px; }
+.ue5-demo .case-links { margin: 16px 0; }
+.ue5-demo .button { border: 1px solid #e9c5ad; cursor: pointer; font-family: inherit; }
+.ue5-demo [data-action="reset"] { background: transparent; color: var(--fg); }
+.ue5-demo [role="status"] { color: var(--fg); }
+.ue5-console { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.ue5-console span { color: #e9c5ad; }
+@media (max-width: 800px) {
+  .ue5-case .hero { grid-template-columns: minmax(0, 1fr); }
+}

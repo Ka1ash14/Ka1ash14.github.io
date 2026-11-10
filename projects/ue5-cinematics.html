@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Демонстрационный концепт Unreal Engine 5. Раскадровка на 20 секунд. Три плана, движение камеры и план рендера.">
+  <meta name="theme-color" content="#11100f">
+  <title>Последний сигнал — Cinematics / рендер | Ka1ash14</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/case-layout.css">
+  <link rel="stylesheet" href="/assets/case-theme.css">
+  <link rel="stylesheet" href="/assets/ue5-cases.css">
+  <link rel="canonical" href="https://ka1ash14.github.io/projects/ue5-cinematics.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Последний сигнал — Cinematics / рендер | Ka1ash14">
+  <meta property="og:description" content="Демонстрационный концепт. Раскадровка на 20 секунд. Три плана, движение камеры и план рендера.">
+  <meta property="og:url" content="https://ka1ash14.github.io/projects/ue5-cinematics.html">
+</head>
+<body class="ue5-case">
+  <a class="skip-link" href="#case-content">Перейти к содержанию</a>
+  <header class="wrap">
+    <a class="brand" href="/" aria-label="KA1ASH — на главную"><span class="mark" aria-hidden="true">K</span> KA1ASH</a>
+    <a class="back" href="/#ue5">← Кейсы Unreal Engine 5</a>
+  </header>
+  <main id="case-content" tabindex="-1">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Демонстрационный концепт</span>
+        <p class="kicker">Unreal Engine 5 / 03 · Cinematics / рендер</p>
+        <h1>Последний сигнал</h1>
+        <p class="lead">Концепт двадцатисекундной синематики о том, как оживает станция «Рубеж». Три кадра ведут от масштаба перевала к сигналу на антенне.</p>
+        <div class="tags"><span class="tag">Sequencer</span><span class="tag">Cine Camera Actor</span><span class="tag">Movie Render Queue</span></div>
+      </div>
+      <figure class="ue5-visual">
+        <img src="/assets/ue5-cinematics.svg" alt="Три кадра раскадровки. Станция среди гор, индикатор питания на шлюзе и антенна с сигнальным огнём." width="960" height="600">
+        <figcaption class="visual-caption">Эскизы кадров и плановый хронометраж.</figcaption>
+      </figure>
+    </div>
+    <section class="content" aria-labelledby="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">01 / Концепт</span>
+          <h2 id="approach">Три кадра до первого сигнала</h2>
+          <p>Сначала зритель считывает масштаб перевала, затем замечает признак жизни на панели и видит, как сигнал доходит до антенны.</p>
+        </div>
+        <ol class="ue5-steps">
+          <li class="card"><span class="kicker">01 / 00–06 с</span><h3>Станция на перевале</h3><p>Общий план, 24 мм. Медленный наезд вдоль тропы. На переднем плане проходят скалы, а станция постепенно становится центром кадра.</p></li>
+          <li class="card"><span class="kicker">02 / 06–12 с</span><h3>Питание восстановлено</h3><p>Крупный план, 50 мм. Камера почти неподвижна. Фокус переходит с кромки шлюза на индикатор, который загорается на панели.</p></li>
+          <li class="card"><span class="kicker">03 / 12–20 с</span><h3>Антенна выходит на связь</h3><p>Средний план, 35 мм. Камера поднимается, выводя антенну из-за склона на фон неба. В финале загорается сигнальный огонь.</p></li>
+        </ol>
+
+      </div>
+    </section>
+    <section class="content" aria-labelledby="production">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">02 / Реализация</span>
+          <h2 id="production">План сборки в UE5</h2>
+          <p>Собрать три камеры в Level Sequence и задать монтаж в Camera Cuts. В тестовом экспорте проверить экспозицию на склейках, читаемость индикатора и стабильность тумана в движении. Для итоговой сборки запланировать вывод последовательности кадров через Movie Render Queue в 1920 × 1080 при 24 кадрах/с.</p>
+        </div>
+        <p class="note"><strong>Статус кейса.</strong> Для кейса подготовлены раскадровка и план монтажа. Сборка в Sequencer и финальный рендер запланированы как этапы реализации.</p>
+      </div>
+    </section>
+    <div class="wrap">
+      <nav class="ue5-related" aria-label="Другие кейсы серии">
+        <span class="kicker">Серия «Рубеж»</span>
+        <div class="case-links">
+          <a href="/projects/ue5-environment.html">Горная станция «Рубеж» ↗</a>
+          <a href="/projects/ue5-blueprints.html">Доступ к шлюзу ↗</a>
+        </div>
+      </nav>
+      <div class="cta">
+        <div><h2>Обсудим ваш проект в Unreal Engine 5</h2><p>Расскажите о сцене, игровой механике или ролике, который хотите собрать.</p></div>
+        <a class="button" href="https://t.me/yuonger61" target="_blank" rel="noopener">Написать в Telegram ↗</a>
+      </div>
+    </div>
+  </main>
+  <footer class="wrap"><span>© 2026 Ka1ash14</span><a href="/#work">Все проекты ↑</a></footer>
+</body>
+</html>

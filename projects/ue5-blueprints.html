@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Демонстрационный концепт Unreal Engine 5. Интерактивная схема шлюза. Подача питания, проверка условий и обратная связь игроку.">
+  <meta name="theme-color" content="#11100f">
+  <title>Доступ к шлюзу — Blueprints / игровая логика | Ka1ash14</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/case-layout.css">
+  <link rel="stylesheet" href="/assets/case-theme.css">
+  <link rel="stylesheet" href="/assets/ue5-cases.css">
+  <link rel="canonical" href="https://ka1ash14.github.io/projects/ue5-blueprints.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Доступ к шлюзу — Blueprints / игровая логика | Ka1ash14">
+  <meta property="og:description" content="Демонстрационный концепт. Интерактивная схема шлюза. Подача питания, проверка условий и обратная связь игроку.">
+  <meta property="og:url" content="https://ka1ash14.github.io/projects/ue5-blueprints.html">
+  <script defer src="/assets/ue5-airlock.js"></script>
+</head>
+<body class="ue5-case">
+  <a class="skip-link" href="#case-content">Перейти к содержанию</a>
+  <header class="wrap">
+    <a class="brand" href="/" aria-label="KA1ASH — на главную"><span class="mark" aria-hidden="true">K</span> KA1ASH</a>
+    <a class="back" href="/#ue5">← Кейсы Unreal Engine 5</a>
+  </header>
+  <main id="case-content" tabindex="-1">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Демонстрационный концепт</span>
+        <p class="kicker">Unreal Engine 5 / 02 · Blueprints / игровая логика</p>
+        <h1>Доступ к шлюзу</h1>
+        <p class="lead">Игрок восстанавливает питание на станции «Рубеж» и открывает шлюз. Подсказка на панели объясняет, почему дверь заперта и что делать дальше.</p>
+        <div class="tags"><span class="tag">Blueprint Interface</span><span class="tag">Event Dispatcher</span><span class="tag">Timeline</span></div>
+        <div class="case-links"><a class="button" href="#airlock">Попробовать симуляцию ↓</a></div>
+      </div>
+      <figure class="ue5-visual">
+        <img src="/assets/ue5-blueprints.svg" alt="Схема логики шлюза. Взаимодействие проверяет питание и открывает дверь либо показывает подсказку." width="960" height="600">
+        <figcaption class="visual-caption">Схема событий и условий для будущего графа Blueprints.</figcaption>
+      </figure>
+    </div>
+    <section class="content" aria-labelledby="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">01 / Концепт</span>
+          <h2 id="approach">От нажатия кнопки до открытия двери</h2>
+          <p>Панель питания и шлюз реагируют на одну команду взаимодействия. Шлюз проверяет питание и собственное состояние перед запуском движения.</p>
+        </div>
+        <ol class="ue5-steps">
+          <li class="card"><span class="kicker">01 / Ввод</span><h3>Определить объект</h3><p>При нажатии кнопки Line Trace из камеры находит объект перед игроком. Через BPI_Interactable команда Interact отправляется панели питания или шлюзу.</p></li>
+          <li class="card"><span class="kicker">02 / Событие</span><h3>Подать питание</h3><p>Панель меняет состояние питания и сообщает об этом через OnPowerRestored. Шлюз обновляет индикатор. Повторное нажатие сохраняет текущее состояние.</p></li>
+          <li class="card"><span class="kicker">03 / Условие</span><h3>Открыть шлюз</h3><p>Без питания шлюз показывает подсказку. При наличии питания запускает Timeline, а состояние «открывается» блокирует повторный запуск до конца анимации.</p></li>
+        </ol>
+        <div class="card ue5-demo" id="airlock" data-airlock>
+          <h3>Пульт шлюза</h3>
+          <p>Веб-симуляция. Попробуйте открыть шлюз, затем подать питание и повторить попытку.</p>
+          <p class="ue5-console"><span>Питание <strong data-power>отключено</strong></span><span>Шлюз <strong data-door>заперт</strong></span></p>
+          <div data-controls hidden>
+            <div class="case-links">
+              <button class="button" type="button" data-action="power">Подать питание</button>
+              <button class="button" type="button" data-action="open">Открыть шлюз</button>
+              <button class="button" type="button" data-action="reset">Сбросить</button>
+            </div>
+          </div>
+          <p role="status" aria-atomic="true">Станция обесточена.</p>
+          <noscript><p>Для работы пульта нужен JavaScript. Логика взаимодействия описана в схеме выше.</p></noscript>
+        </div>
+      </div>
+    </section>
+    <section class="content" aria-labelledby="production">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">02 / Реализация</span>
+          <h2 id="production">План сборки в UE5</h2>
+          <p>При сборке в UE5 проверить попытку открыть шлюз без питания, взаимодействие вне дистанции и повторный ввод во время движения двери. В веб-версии можно пройти основной сценарий, повторить действия и сбросить состояние. Переход «открывается» предусмотрен для анимации двери в UE5.</p>
+        </div>
+        <p class="note"><strong>Статус кейса.</strong> Кейс включает браузерную симуляцию состояний и схему для переноса в Blueprints.</p>
+      </div>
+    </section>
+    <div class="wrap">
+      <nav class="ue5-related" aria-label="Другие кейсы серии">
+        <span class="kicker">Серия «Рубеж»</span>
+        <div class="case-links">
+          <a href="/projects/ue5-environment.html">Горная станция «Рубеж» ↗</a>
+          <a href="/projects/ue5-cinematics.html">Последний сигнал ↗</a>
+        </div>
+      </nav>
+      <div class="cta">
+        <div><h2>Обсудим ваш проект в Unreal Engine 5</h2><p>Расскажите о сцене, игровой механике или ролике, который хотите собрать.</p></div>
+        <a class="button" href="https://t.me/yuonger61" target="_blank" rel="noopener">Написать в Telegram ↗</a>
+      </div>
+    </div>
+  </main>
+  <footer class="wrap"><span>© 2026 Ka1ash14</span><a href="/#work">Все проекты ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Демонстрационный концепт Unreal Engine 5. Горная станция на закате. Маршрут через перевал, ориентиры и постановка света.">
+  <meta name="theme-color" content="#11100f">
+  <title>Горная станция «Рубеж» — Environment Design | Ka1ash14</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/case-layout.css">
+  <link rel="stylesheet" href="/assets/case-theme.css">
+  <link rel="stylesheet" href="/assets/ue5-cases.css">
+  <link rel="canonical" href="https://ka1ash14.github.io/projects/ue5-environment.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Горная станция «Рубеж» — Environment Design | Ka1ash14">
+  <meta property="og:description" content="Демонстрационный концепт. Горная станция на закате. Маршрут через перевал, ориентиры и постановка света.">
+  <meta property="og:url" content="https://ka1ash14.github.io/projects/ue5-environment.html">
+</head>
+<body class="ue5-case">
+  <a class="skip-link" href="#case-content">Перейти к содержанию</a>
+  <header class="wrap">
+    <a class="brand" href="/" aria-label="KA1ASH — на главную"><span class="mark" aria-hidden="true">K</span> KA1ASH</a>
+    <a class="back" href="/#ue5">← Кейсы Unreal Engine 5</a>
+  </header>
+  <main id="case-content" tabindex="-1">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Демонстрационный концепт</span>
+        <p class="kicker">Unreal Engine 5 / 01 · Environment Design</p>
+        <h1>Горная станция «Рубеж»</h1>
+        <p class="lead">Заброшенная станция связи на перевале. От каменистой тропы до антенны маршрут читается по силуэтам и свету.</p>
+        <div class="tags"><span class="tag">Blockout</span><span class="tag">Lumen</span><span class="tag">Модульное окружение</span></div>
+      </div>
+      <figure class="ue5-visual">
+        <img src="/assets/ue5-environment.svg" alt="Горная тропа ведёт к подсвеченному шлюзу станции и далее к антенне на гребне." width="960" height="600">
+        <figcaption class="visual-caption">Композиционный эскиз. Цифры отмечают три точки маршрута.</figcaption>
+      </figure>
+    </div>
+    <section class="content" aria-labelledby="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">01 / Концепт</span>
+          <h2 id="approach">Маршрут, который читается по свету</h2>
+          <p>Антенна видна уже с тропы. Перед входом внимание переключается на тёплую полосу света над шлюзом, а за станцией взгляд снова находит антенну.</p>
+        </div>
+        <ol class="ue5-steps">
+          <li class="card"><span class="kicker">01 / Подход</span><h3>Тропа на перевале</h3><p>Изгиб тропы ведёт взгляд от переднего плана к станции. Тёмные скалы по краям кадра оставляют проход читаемым.</p></li>
+          <li class="card"><span class="kicker">02 / Порог</span><h3>Шлюз станции</h3><p>Низкий бетонный объём контрастирует со склоном. Свет над дверью выделяет вход в тени фасада.</p></li>
+          <li class="card"><span class="kicker">03 / Ориентир</span><h3>Антенна на гребне</h3><p>Антенна читается на фоне неба и отмечает конечную точку маршрута после выхода из станции.</p></li>
+        </ol>
+
+      </div>
+    </section>
+    <section class="content" aria-labelledby="production">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">02 / Реализация</span>
+          <h2 id="production">План сборки в UE5</h2>
+          <p>Сначала собрать блокинг тропы, фасада и площадки под антенну. Затем заменить простые формы модульными секциями бетона и металла, настроить закатный свет и проверить, как Lumen подсвечивает вход. При проходе с камеры игрока проверить, виден ли ориентир на поворотах и различим ли шлюз на фоне фасада.</p>
+        </div>
+        <p class="note"><strong>Статус кейса.</strong> Для кейса подготовлен композиционный эскиз. Сборка уровня, материалы и свет в Unreal Engine 5 описаны как план реализации.</p>
+      </div>
+    </section>
+    <div class="wrap">
+      <nav class="ue5-related" aria-label="Другие кейсы серии">
+        <span class="kicker">Серия «Рубеж»</span>
+        <div class="case-links">
+          <a href="/projects/ue5-blueprints.html">Доступ к шлюзу ↗</a>
+          <a href="/projects/ue5-cinematics.html">Последний сигнал ↗</a>
+        </div>
+      </nav>
+      <div class="cta">
+        <div><h2>Обсудим ваш проект в Unreal Engine 5</h2><p>Расскажите о сцене, игровой механике или ролике, который хотите собрать.</p></div>
+        <a class="button" href="https://t.me/yuonger61" target="_blank" rel="noopener">Написать в Telegram ↗</a>
+      </div>
+    </div>
+  </main>
+  <footer class="wrap"><span>© 2026 Ka1ash14</span><a href="/#work">Все проекты ↑</a></footer>
+</body>
+</html>
